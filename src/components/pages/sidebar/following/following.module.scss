@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-muted);
+}
+
+.root:hover {
+  text-decoration: none;
+}
+
+// .root:not(:hover) {
+// }
+
+.number {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.muted:not(:hover) {
+  color: inherit;
+}

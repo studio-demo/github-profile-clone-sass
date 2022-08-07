@@ -1,0 +1,53 @@
+.root {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 48px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 6px;
+}
+
+.wrapper:hover {
+  background-color: rgba(208, 215, 222, 0.32);
+}
+
+.icon {
+  color: var(--color-text-muted);
+  margin-right: 8px;
+}
+
+.badge {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 6px;
+  margin-left: 8px;
+  border-radius: 2em;
+  background-color: rgba(175, 184, 193, 0.2);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.active {
+  font-weight: 600;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(253, 140, 115);
+}

@@ -1,0 +1,12 @@
+.root {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    gap: 4px;
+}
+
+.tick {
+    font-size: 12px;
+    line-height: 1;
+    width: var(--heatmap-day-size);
+}
