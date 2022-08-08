@@ -1,43 +1,15 @@
 import classNames from "classnames";
-import { memo, useContext } from "react";
-import { AppContext } from "../../../app.context";
+import { memo } from "react";
 import { NavigationTab, ProfileTab } from "./navigation-tab/navigation-tab";
 import styles from "./navigation-tabs.module.scss";
 
 export interface NavigationTabsProps {
   className?: string;
+  tabs: ProfileTab[];
 }
 
 export const NavigationTabs = memo<NavigationTabsProps>(
-  function NavigationTabs({ className }) {
-    const { navigationStats } = useContext(AppContext);
-
-    const tabs: ProfileTab[] = [
-      {
-        icon: "overview",
-        name: "Overview",
-        isActive: true,
-      },
-      {
-        icon: "repositories",
-        name: "Repositories",
-        counter: navigationStats?.data?.reposCount ?? 0,
-      },
-      {
-        icon: "project",
-        name: "Projects",
-      },
-      {
-        icon: "package",
-        name: "Packages",
-      },
-      {
-        icon: "star",
-        name: "Stars",
-        counter: navigationStats?.data?.starsCount ?? 0,
-      },
-    ];
-
+  function NavigationTabs({ className, tabs = [] }) {
     return (
       <ul className={classNames(styles.root, className)}>
         {tabs.length &&

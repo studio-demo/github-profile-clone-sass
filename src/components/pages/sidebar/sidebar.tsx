@@ -11,6 +11,7 @@ import { Organizations } from "./organizations/organizations";
 import { SidebarBlock } from "./sidebar-block/sidebar-block";
 import styles from "./sidebar.module.scss";
 import { UserInfo } from "./user-info/user-info";
+
 export interface SidebarProps {
   className?: string;
   user?: GitHubUser;
@@ -18,7 +19,10 @@ export interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ className, user }) => {
   return (
-    <aside className={classNames(styles.root, className)}>
+    <aside
+      className={classNames(styles.root, className)}
+      style={{ gap: "16px" }}
+    >
       <Avatar url={user?.avatar} username={user?.username} name={user?.name} />
 
       <Follow />

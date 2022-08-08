@@ -4,6 +4,6 @@ import { SidebarBlock } from '../../../components/pages/sidebar/sidebar-block/si
 export default createBoard({
     name: 'SidebarBlock',
     Board: () => <SidebarBlock label="Any label goes here">
-        <div>lorasdasdasdasd</div>
+        <div>organizations</div>
     </SidebarBlock>
 });

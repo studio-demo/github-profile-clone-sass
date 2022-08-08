@@ -1,12 +1,8 @@
-@st-import [--page-sidebar-width] from "../../../assets/layout-variables.module.scss";
-
 .root {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  // gap: 16px; // moved to inline style
   width: var(--page-sidebar-width);
-  flex-shrink: 0;
-  margin-top: -32px;
   flex-shrink: 0;
   margin-top: -32px;
 }

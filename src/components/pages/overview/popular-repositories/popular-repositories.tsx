@@ -18,8 +18,13 @@ export const PopularRepositories = memo<NavigationTabsProps>(
           {repositories.map((repository) => (
             <Repository
               className={styles.item}
-              repository={repository}
               key={repository.name}
+              name={repository.name}
+              url={repository.url}
+              description={repository.description}
+              forks={repository.forks}
+              language={repository.language}
+              stars={repository.stars}
             />
           ))}
         </ul>

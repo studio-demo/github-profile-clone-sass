@@ -3,56 +3,58 @@ import { memo, useMemo } from "react";
 import type { GithubRepository } from "../../../../../shared/model/github-repository";
 import { Icon } from "../../../../shared/icon/icon";
 import { Link } from "../../../../shared/link/link";
+import { RepositoryLabel } from "./repository-label/repository-label";
 import styles from "./repository.module.scss";
 
-export interface RepositoryProps {
+export interface RepositoryProps extends GithubRepository {
   className?: string;
-  repository: GithubRepository;
 }
 
 export const Repository = memo<RepositoryProps>(function Repository({
   className,
-  repository,
+  language,
+  url,
+  name,
+  forks,
+  stars,
+  description,
 }) {
-  const language = useMemo(
-    () => repository?.language?.toLowerCase() ?? "",
-    [repository]
-  );
+  const repoLanguage = useMemo(() => language?.toLowerCase() ?? "", [language]);
   const languageState = useMemo(
     () => [
-      { [styles.css]: language.includes("css") },
-      { [styles.html]: language.includes("html") },
-      { [styles.js]: language.includes("javascript") },
-      { [styles.php]: language.includes("php") },
+      { [styles.css]: repoLanguage.includes("css") },
+      { [styles.html]: repoLanguage.includes("html") },
+      { [styles.js]: repoLanguage.includes("javascript") },
+      { [styles.php]: repoLanguage.includes("php") },
     ],
-    [language]
+    [repoLanguage]
   );
 
   return (
     <li className={classNames(styles.root, className)}>
       <div className={styles.header}>
-        <Link className={styles.title} url={repository.url} bold>
-          {repository.name}
+        <Link className={styles.title} url={url} bold>
+          {name}
         </Link>
-        <span className={styles.type}>Public</span>
+        <RepositoryLabel label="Public" />
       </div>
-      <div className={styles.description}>{repository.description}</div>
+      <div className={styles.description}>{description}</div>
       <div className={styles.footer}>
-        {repository.language && (
+        {language && (
           <div className={classNames(styles.language, languageState)}>
-            {repository.language}
+            {language}
           </div>
         )}
-        {repository.stars > 0 && (
+        {stars > 0 && (
           <div className={styles.stats}>
             <Icon name="star" />
-            <span>{repository.stars}</span>
+            <span>{stars}</span>
           </div>
         )}
-        {repository.forks > 0 && (
+        {forks > 0 && (
           <div className={styles.stats}>
             <Icon name="fork" />
-            <span>{repository.forks}</span>
+            <span>{forks}</span>
           </div>
         )}
       </div>
