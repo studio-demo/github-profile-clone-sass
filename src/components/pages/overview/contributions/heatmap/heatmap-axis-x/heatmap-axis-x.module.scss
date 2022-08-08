@@ -1,12 +1,13 @@
+@import "../../../../../../assets/fonts.scss";
 .root {
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    gap: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  gap: 4px;
 }
 
 .tick {
-    font-size: 12px;
-    line-height: 1;
-    width: var(--heatmap-day-size);
+  font-size: $small-font-size;
+  line-height: 1;
+  width: var(--heatmap-day-size);
 }

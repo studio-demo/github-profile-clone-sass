@@ -1,3 +1,5 @@
+@import "../../../../assets/fonts.scss";
+
 $spacing-between-columns: 16px;
 
 .root {
@@ -7,7 +9,7 @@ $spacing-between-columns: 16px;
   margin-bottom: 8px;
   margin-top: 24px;
 
-  font-size: 16px;
+  font-size: $large-font-size;
   font-weight: 400;
 }
 

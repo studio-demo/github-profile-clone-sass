@@ -1,15 +1,22 @@
+@import "../../../../../assets/fonts.scss";
+
+$css: #563d7c;
+$js: #f1e05a;
+$php: #4f5d95;
+$html: #e34c26;
+
 .root {
   border: 1px solid var(--color-border-muted);
   border-radius: 6px;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  font-size: 12px;
+  font-size: $small-font-size;
   color: var(--color-text-muted);
 }
 
 .title {
-  font-size: 14px;
+  font-size: $medium-font-size;
 }
 
 .header {
@@ -25,19 +32,19 @@
 }
 
 .language.css::before {
-  background: #563d7c;
+  background: $css;
 }
 
 .language.js::before {
-  background: #f1e05a;
+  background: $js;
 }
 
 .language.php::before {
-  background: #4f5d95;
+  background: $php;
 }
 
 .language.html::before {
-  background: #e34c26;
+  background: $html;
 }
 
 .language::before {
@@ -53,7 +60,7 @@
 }
 
 .description {
-  font-size: 12px;
+  font-size: $small-font-size;
   margin: 8px 0 16px;
   flex: 1;
 }

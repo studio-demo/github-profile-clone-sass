@@ -1,33 +1,35 @@
+@import "../../../../assets/fonts.scss";
+
 .root {
-    display: block;
-    width: 100%;
-    padding: 5px 16px;
-    color: var(--color-text-primary);
-    background-color: #f6f8fa;
+  display: block;
+  width: 100%;
+  padding: 5px 16px;
+  color: var(--color-text-primary);
+  background-color: #f6f8fa;
 
-    box-shadow: rgba(27, 31, 36, 0.04) 0px 1px 0px 0px;
-    border: 1px solid rgba(27, 31, 36, 0.15);
+  box-shadow: rgba(27, 31, 36, 0.04) 0px 1px 0px 0px;
+  border: 1px solid rgba(27, 31, 36, 0.15);
 
-    border-radius: 6px;
+  border-radius: 6px;
 
-    text-align: center;
-    font-size: 14px;
+  text-align: center;
+  font-size: $medium-font-size;
 
-    font-weight: 500;
-    line-height: 20px;
+  font-weight: 500;
+  line-height: 20px;
 
-    cursor: pointer;
-    user-select: none;
+  cursor: pointer;
+  user-select: none;
 }
 
 .root:hover {
-    background-color: #f3f4f6;
-    border-color: rgba(27, 31, 36, 0.15);
-    transition-duration: .1s;
+  background-color: #f3f4f6;
+  border-color: rgba(27, 31, 36, 0.15);
+  transition-duration: 0.1s;
 }
 
 .root:active {
-    background-color: hsla(220, 14%, 93%, 1);
-    border-color: rgba(27, 31, 36, 0.15);
-    transition-duration: .1s;
+  background-color: hsla(220, 14%, 93%, 1);
+  border-color: rgba(27, 31, 36, 0.15);
+  transition-duration: 0.1s;
 }

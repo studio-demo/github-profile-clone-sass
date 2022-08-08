@@ -4,10 +4,21 @@ import { Icon } from "../../../../shared/icon/icon";
 import type { Icons } from "../../../../shared/icon/icons";
 import styles from "./navigation-tab.module.scss";
 
+/**
+ * Profile navigation tab component.
+ */
 export interface ProfileTab {
+  /** Tab icon */
   icon: Icons;
+  /** Tab name */
   name: string;
+  /** Shows a counter on the item
+   * @optional
+   */
   counter?: number;
+  /** Marks the current item as selected
+   * @optional
+   * */
   isActive?: boolean;
 }
 

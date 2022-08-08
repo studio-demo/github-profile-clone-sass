@@ -1,9 +1,11 @@
+@import "../../../../../../assets/fonts.scss";
+
 .root {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 3px;
-  font-size: 12px;
+  font-size: $small-font-size;
   margin-top: 12px;
   color: var(--color-text-muted);
 }

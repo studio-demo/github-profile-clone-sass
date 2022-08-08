@@ -1,6 +1,8 @@
+@import "../../../../../assets/fonts.scss";
+
 .root {
   cursor: pointer;
-  font-size: 14px;
+  font-size: $medium-font-size;
   line-height: 30px;
   display: flex;
   align-items: center;
@@ -31,7 +33,7 @@
   margin-left: 8px;
   border-radius: 2em;
   background-color: rgba(175, 184, 193, 0.2);
-  font-size: 12px;
+  font-size: $small-font-size;
   font-weight: 500;
   line-height: 18px;
   text-align: center;

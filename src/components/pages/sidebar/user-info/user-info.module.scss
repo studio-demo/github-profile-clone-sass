@@ -1,24 +1,26 @@
+@import "../../../../assets/fonts.scss";
+
 .root {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .detail {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 14px;
-    padding-left: 24px;
-    height: 25px;
-    display: flex;
-    align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: $medium-font-size;
+  padding-left: 24px;
+  height: 25px;
+  display: flex;
+  align-items: center;
 }
 
 .icon {
-    color: var(--color-text-muted);
-    margin-left: -24px;
-    margin-right: 8px;
+  color: var(--color-text-muted);
+  margin-left: -24px;
+  margin-right: 8px;
 }
