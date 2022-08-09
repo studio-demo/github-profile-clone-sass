@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Bootstrap",
+    "components": [
+      {
+        "filePath": "react-bootstrap/Alert",
+        "exportName": "default",
+        "name": "Alert"
+      },
+      {
+        "filePath": "react-bootstrap/Accordion",
+        "exportName": "default",
+        "name": "Accordion"
+      },
+      {
+        "filePath": "react-bootstrap/Button",
+        "exportName": "default",
+        "name": "Button"
+      },
+      {
+        "filePath": "react-bootstrap/ButtonGroup",
+        "exportName": "default",
+        "name": "ButtonGroup"
+      },
+      {
+        "filePath": "react-bootstrap/Breadcrumb",
+        "exportName": "default",
+        "name": "Breadcrumb"
+      },
+      {
+        "filePath": "react-bootstrap/Card",
+        "exportName": "default",
+        "name": "Card"
+      },
+      {
+        "filePath": "react-bootstrap/Dropdown",
+        "exportName": "default",
+        "name": "Dropdown"
+      },
+      {
+        "filePath": "react-bootstrap/DropdownButton",
+        "exportName": "default",
+        "name": "DropdownButton"
+      },
+      {
+        "filePath": "react-bootstrap/Form",
+        "exportName": "default",
+        "name": "Form"
+      },
+      {
+        "filePath": "react-bootstrap/InputGroup",
+        "exportName": "default",
+        "name": "InputGroup"
+      },
+      {
+        "filePath": "react-bootstrap/Image",
+        "exportName": "default",
+        "name": "Image"
+      },
+      {
+        "filePath": "react-bootstrap/Container",
+        "exportName": "default",
+        "name": "Container"
+      },
+      {
+        "filePath": "react-bootstrap/Row",
+        "exportName": "default",
+        "name": "Row"
+      },
+      {
+        "filePath": "react-bootstrap/Col",
+        "exportName": "default",
+        "name": "Col"
+      }
+    ]
+  }
+]
