@@ -6,6 +6,8 @@ module.exports = {
   newComponent: {
     /* This path is required to create new components through WCS. */
     componentsPath: "src",
+    /* This path is only required when using custom templates. */
+    templatesPath: "src/wcs-component-templates",
   },
   componentsDiscovery: {
     include: ["src/**"],
