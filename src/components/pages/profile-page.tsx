@@ -14,9 +14,7 @@ export const ProfilePage: React.FC<{ userInfo: Fetcher<GitHubUser | null> }> = (
         document.title = 'Error';
 
         const errorMessage =
-            typeof userInfo.error === 'object' &&
-            userInfo.error !== null &&
-            'toString' in userInfo.error
+            typeof userInfo.error === 'object' && userInfo.error !== null && 'toString' in userInfo.error
                 ? userInfo.error?.toString()
                 : 'Unknown error';
 

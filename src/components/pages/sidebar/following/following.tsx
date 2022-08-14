@@ -1,8 +1,8 @@
-import classNames from "classnames";
-import { memo } from "react";
-import { Icon } from "../../../shared/icon/icon";
-import { Link } from "../../../shared/link/link";
-import styles from "./following.module.scss";
+import classNames from 'classnames';
+import { memo } from 'react';
+import { Icon } from '../../../shared/icon/icon';
+import { Link } from '../../../shared/link/link';
+import styles from './following.module.scss';
 import Badge from 'react-bootstrap/Badge';
 
 export interface FollowingProps {
@@ -11,11 +11,7 @@ export interface FollowingProps {
     following?: number;
 }
 
-export const Following = memo<FollowingProps>(function Following({
-    className,
-    followers,
-    following,
-}) {
+export const Following = memo<FollowingProps>(function Following({ className, followers, following }) {
     return (
         <div className={classNames(styles.root, className)}>
             <Badge bg="secondary">
@@ -23,6 +19,7 @@ export const Following = memo<FollowingProps>(function Following({
                     <Icon name="followers" />
                     <span>{followers ?? 0}</span> followers
                 </Link>
-            </Badge></div>
+            </Badge>
+        </div>
     );
 });

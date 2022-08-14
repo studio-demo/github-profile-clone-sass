@@ -2,8 +2,7 @@ export class Driver {
     #rootElement: HTMLElement | null;
 
     constructor(selection: string | HTMLElement = 'body') {
-        this.#rootElement =
-            typeof selection === 'string' ? document.querySelector(selection) : selection;
+        this.#rootElement = typeof selection === 'string' ? document.querySelector(selection) : selection;
     }
 
     get title() {

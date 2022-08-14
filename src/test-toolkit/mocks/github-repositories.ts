@@ -55,8 +55,7 @@ export const response_repositories = {
                     node: {
                         name: 'pad',
                         url: 'https://github.com/timbl/pad',
-                        description:
-                            'A SoLiD app for shared collaborate editing of a text document',
+                        description: 'A SoLiD app for shared collaborate editing of a text document',
                         stargazerCount: 37,
                         forkCount: 8,
                         primaryLanguage: {
@@ -68,8 +67,7 @@ export const response_repositories = {
                     node: {
                         name: 'standard',
                         url: 'https://github.com/timbl/standard',
-                        description:
-                            ':star2: JavaScript Standard Style — One Style to Rule Them All',
+                        description: ':star2: JavaScript Standard Style — One Style to Rule Them All',
                         stargazerCount: 51,
                         forkCount: 5,
                         primaryLanguage: {

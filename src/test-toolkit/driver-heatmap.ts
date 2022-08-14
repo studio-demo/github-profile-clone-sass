@@ -1,34 +1,30 @@
-import { Driver } from "./driver";
-import styles from "./../components/pages/overview/contributions/heatmap/heatmap.module.scss";
+import { Driver } from './driver';
+import styles from './../components/pages/overview/contributions/heatmap/heatmap.module.scss';
 
 export class DriverHeatmap extends Driver {
-  getData(): number[][] {
-    const weeks = this.selectAll(`.${styles.week}`);
-    const data: number[][] = [];
+    getData(): number[][] {
+        const weeks = this.selectAll(`.${styles.week}`);
+        const data: number[][] = [];
 
-    weeks?.forEach((week) => {
-      const weekData: number[] = [];
+        weeks?.forEach((week) => {
+            const weekData: number[] = [];
 
-      new Driver(week as HTMLElement)
-        .selectAll("[data-contribution-date]")
-        ?.forEach((day) => {
-          const title = new Driver(day as HTMLElement).title ?? "";
-          const contribution = !isNaN(parseInt(title)) ? parseInt(title) : 0;
+            new Driver(week as HTMLElement).selectAll('[data-contribution-date]')?.forEach((day) => {
+                const title = new Driver(day as HTMLElement).title ?? '';
+                const contribution = !isNaN(parseInt(title)) ? parseInt(title) : 0;
 
-          weekData.push(contribution);
+                weekData.push(contribution);
+            });
+
+            data.push(weekData);
         });
 
-      data.push(weekData);
-    });
+        return data;
+    }
 
-    return data;
-  }
+    constructor() {
+        const HeatmapComponent = document.querySelector('.' + styles.root) as HTMLElement;
 
-  constructor() {
-    const HeatmapComponent = document.querySelector(
-      "." + styles.root
-    ) as HTMLElement;
-
-    super(HeatmapComponent);
-  }
+        super(HeatmapComponent);
+    }
 }

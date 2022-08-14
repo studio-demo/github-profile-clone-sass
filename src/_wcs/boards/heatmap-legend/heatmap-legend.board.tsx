@@ -3,5 +3,5 @@ import { HeatmapLegend } from '../../../components/pages/overview/contributions/
 
 export default createBoard({
     name: 'HeatmapLegend',
-    Board: () => <HeatmapLegend />
+    Board: () => <HeatmapLegend />,
 });

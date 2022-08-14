@@ -22,9 +22,7 @@ export const testRenderer = () => {
             const root = createRoot(container);
             disposables.add(() => root.unmount());
 
-            await new Promise((resolve) =>
-                root.render(<Renderer onMount={resolve}>{jsx}</Renderer>)
-            );
+            await new Promise((resolve) => root.render(<Renderer onMount={resolve}>{jsx}</Renderer>));
 
             return container;
         },

@@ -1,4 +1,4 @@
-@import "../../../../../assets/fonts.scss";
+@import '../../../../../assets/fonts.scss';
 
 $css: #563d7c;
 $js: #f1e05a;
@@ -48,7 +48,7 @@ $html: #e34c26;
 }
 
 .language::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 3px;

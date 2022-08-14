@@ -50,9 +50,7 @@ const getMaxContribution = (gitHubWeeks: GithubWeek[]) =>
     Math.max(
         ...gitHubWeeks
             .map(({ contributionDays: week }) =>
-                week
-                    .filter((day) => day.contributionCount > 0)
-                    .map(({ contributionCount }) => contributionCount)
+                week.filter((day) => day.contributionCount > 0).map(({ contributionCount }) => contributionCount)
             )
             .flat()
     );

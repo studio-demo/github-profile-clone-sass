@@ -31,8 +31,5 @@ export function useFetcher<T>(fetcher: DataFetcher<T>): Fetcher<T> {
         return () => fetcher.unsubscribe(onData);
     }, [fetcher]);
 
-    return useMemo(
-        () => ({ data, isLoading, hasError, error }),
-        [data, isLoading, hasError, error]
-    );
+    return useMemo(() => ({ data, isLoading, hasError, error }), [data, isLoading, hasError, error]);
 }
