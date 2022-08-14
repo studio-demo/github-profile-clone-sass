@@ -36,16 +36,15 @@ export const NavigationTab = memo<NavigationTabProps>(function NavigationTabs({
       className={classNames(
         styles.root,
         { [styles.active]: tab.isActive },
+        styles.wrapper,
         className
       )}
     >
-      <div className={styles.wrapper}>
         <Icon className={styles.icon} name={tab.icon} />
         <span>{tab.name}</span>
         {(tab.counter ?? 0) > 0 && (
           <span className={styles.badge}>{tab.counter}</span>
         )}
-      </div>
     </li>
   );
 });
