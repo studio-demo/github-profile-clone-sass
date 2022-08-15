@@ -29,8 +29,8 @@
 .badge {
   padding: 0 6px;
   margin-left: 8px;
-  border-radius: 2em;
-  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 24px;
+  background-color: var(--color-neutral-muted);
   font-size: $small-font-size;
   line-height: 18px;
   text-align: center;

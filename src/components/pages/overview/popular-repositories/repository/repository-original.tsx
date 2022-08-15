@@ -4,7 +4,7 @@ import type { GithubRepository } from '../../../../../shared/model/github-reposi
 import { Icon } from '../../../../shared/icon/icon';
 import { Link } from '../../../../shared/link/link';
 import { RepositoryLabel } from './repository-label/repository-label';
-import styles from './repository.module.scss';
+import styles from './repository-original.module.scss';
 
 export interface RepositoryProps extends GithubRepository {
     className?: string;

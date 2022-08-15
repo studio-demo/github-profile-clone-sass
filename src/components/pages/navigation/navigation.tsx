@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { memo, useContext } from 'react';
 import { AppContext } from '../../app.context';
-import { ProfileTab } from './navigation-tabs/navigation-tab/navigation-tab';
-import { NavigationTabs } from './navigation-tabs/navigation-tabs';
+import { IMenuItem } from './menu/menu-item/menu-item';
+import { NavigationTabs } from './menu/menu';
 import { NavigationUserInfo } from './navigation-user-info/navigation-user-info';
 import styles from './navigation.module.scss';
 
@@ -13,7 +13,7 @@ export interface NavigationProps {
 export const Navigation = memo<NavigationProps>(function Navigation({ className }) {
     const { navigationStats } = useContext(AppContext);
 
-    const tabs: ProfileTab[] = [
+    const tabs: IMenuItem[] = [
         {
             icon: 'overview',
             name: 'Overview',
@@ -42,7 +42,7 @@ export const Navigation = memo<NavigationProps>(function Navigation({ className 
         <nav className={classNames(styles.root, className)}>
             <NavigationUserInfo className={styles.sidebar} />
 
-            <NavigationTabs className={styles.content} tabs={tabs} />
+            <NavigationTabs className={styles.content} menuItems={tabs} />
         </nav>
     );
 });

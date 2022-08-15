@@ -1,8 +1,8 @@
 import { createBoard } from '@wixc3/react-board';
-import { ProfileTab } from '../../../components/pages/navigation/navigation-tabs/navigation-tab/navigation-tab';
-import { NavigationTabs } from '../../../components/pages/navigation/navigation-tabs/navigation-tabs';
+import { IMenuItem } from '../../../components/pages/navigation/menu/menu-item/menu-item';
+import { NavigationTabs } from '../../../components/pages/navigation/menu/menu';
 
-const tabs: ProfileTab[] = [
+const tabs: IMenuItem[] = [
     {
         icon: 'overview',
         name: 'Overview',
@@ -30,7 +30,7 @@ const tabs: ProfileTab[] = [
 
 export default createBoard({
     name: 'NavigationTabs',
-    Board: () => <NavigationTabs tabs={tabs} />,
+    Board: () => <NavigationTabs menuItems={tabs} />,
     environmentProps: {
         canvasWidth: 602,
     },
