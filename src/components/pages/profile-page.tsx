@@ -1,6 +1,6 @@
 import type { Fetcher } from '../../shared/hooks/use-fetcher';
 import type { GitHubUser } from '../../shared/model/github-user';
-import { Navigation } from './navigation/navigation';
+
 import { Profile } from './profile';
 
 export const ProfilePage: React.FC<{ userInfo: Fetcher<GitHubUser | null> }> = ({ userInfo }) => {
@@ -23,11 +23,5 @@ export const ProfilePage: React.FC<{ userInfo: Fetcher<GitHubUser | null> }> = (
 
     document.title = `${userInfo.data.name} (${userInfo.data.username})`;
 
-    return (
-        <>
-            <Navigation />
-
-            <Profile user={userInfo.data} />
-        </>
-    );
+    return <Profile user={userInfo.data} />;
 };

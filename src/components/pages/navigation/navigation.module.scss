@@ -1,20 +1,7 @@
 .root {
-  position: sticky;
-  /*
-     * Used for element inside container, that is more narrow than viewport, to "overcome"
-     * it and become 100% of viewport in width and height, while leaving it's content
-     * intact (narrow, starting where narrow container starts). It's absolute 0 0, which can be
-     *  overriden by users of this mixin.
-     */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  margin-left: calc((100vw - 100%) / -2);
-  padding-left: calc((100vw - 100%) / 2);
+  display: flex;
   background: var(--color-bg-primary);
   border-bottom: 1px solid var(--color-border-muted);
-  display: flex;
-  flex-direction: row;
   gap: var(--page-gap);
 }
 
