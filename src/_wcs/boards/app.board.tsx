@@ -3,13 +3,13 @@ import { App } from '../../components/app';
 
 export default createBoard({
     name: 'App',
-    // You can set token and username props for app to work on board; otherwise it'd use mocked data.
-    // Token could be generated here: https://github.com/settings/tokens/new
-    // `Board: () => <App token="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" username="plisovyi"></App>,`
-    Board: () => <App username="" />,
+    Board: () => <App />,
     environmentProps: {
-        canvasWidth: 1378,
-        windowWidth: 1440,
-        windowHeight: 800,
+        windowWidth: 1300,
+        windowHeight: 1300,
+        canvasMargin: {
+            left: 0,
+            right: 0
+        }
     },
 });

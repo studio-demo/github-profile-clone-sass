@@ -23,7 +23,7 @@ export class GithubService {
 
     public getContributions() {
         return new DataFetcher(async () => {
-            if (this.token) {
+            if (this.token && this.username) {
                 const response: ContributionResponse = await graphql(
                     `
                         {
@@ -59,7 +59,7 @@ export class GithubService {
 
     public getUserInfo() {
         return new DataFetcher(async () => {
-            if (this.token) {
+            if (this.token && this.username) {
                 const response: UserResponse = await graphql(
                     `
                         {
@@ -112,7 +112,7 @@ export class GithubService {
 
     public getUserStats() {
         return new DataFetcher(async () => {
-            if (this.token) {
+            if (this.token && this.username) {
                 const response: {
                     user: {
                         repositories: { totalCount: number };
@@ -155,7 +155,7 @@ export class GithubService {
 
     public getUserRepos() {
         return new DataFetcher(async () => {
-            if (this.token) {
+            if (this.token && this.username) {
                 const response: RepositoryResponse = await graphql(
                     `
                         {
