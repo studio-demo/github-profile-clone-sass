@@ -1,18 +1,21 @@
-import classNames from 'classnames';
-import { memo, useState } from 'react';
+import { memo, useReducer, useMemo } from 'react';
 import styles from './follow.module.scss';
 
 export interface FollowProps {
-    className?: string;
+    defaultIsFollowing?: boolean;
 }
 
-export const Follow = memo<FollowProps>(function Follow({ className }) {
-    const [isFollowing, setIsFollowing] = useState(false);
-    const toggleFollowing = () => setIsFollowing(!isFollowing);
+export const Follow = memo<FollowProps>(({ defaultIsFollowing = false }) => {
+    const [isFollowing, toggleFollowing] = useReducer((v) => !v, defaultIsFollowing);
+    const buttonText = useMemo(() => getButtonText(isFollowing), [isFollowing]);
 
     return (
-        <button className={classNames(styles.root, className)} onClick={toggleFollowing}>
-            {isFollowing ? 'Unfollow' : 'Follow'}
-        </button>
+        <div className={styles.root}>
+            <button className={styles.button} onClick={toggleFollowing}>
+                {buttonText}
+            </button>
+        </div>
     );
 });
+
+const getButtonText = (isFollowing: boolean) => (isFollowing ? 'Unfollow' : 'Follow');
