@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import { Link } from '../../shared/link/link';
-import { Achievements } from './achievements/achievements';
 import { Avatar } from './avatar/avatar';
 import { Bio } from './bio/bio';
 import { Follow } from './follow/follow';
@@ -36,10 +35,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, user }) => {
                 twitter={user?.twitter}
                 url={user?.url}
             />
-
-            <SidebarBlock label="Achievements">
-                <Achievements />
-            </SidebarBlock>
 
             {user?.organizations?.length ? (
                 <SidebarBlock label="Organizations">
