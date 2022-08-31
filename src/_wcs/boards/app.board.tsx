@@ -9,7 +9,7 @@ export default createBoard({
         windowHeight: 1300,
         canvasMargin: {
             left: 0,
-            right: 0
-        }
+            right: 0,
+        },
     },
 });

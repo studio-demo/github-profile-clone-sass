@@ -14,19 +14,24 @@ const JohnDoe: GitHubUser = {
     twitter: '',
     url: '',
     organization: '',
-    organizations: [{
-        avatar: 'https://avatars.githubusercontent.com/u/98403515?s=64&v=4',
-        login: 'a'
-    }, {
-        avatar: 'https://avatars.githubusercontent.com/u/98403600?s=64&v=4',
-        login: 'b'
-    }, {
-        avatar: 'https://avatars.githubusercontent.com/u/108737927?s=64&v=4',
-        login: 'c'
-    }, {
-        avatar: 'https://avatars.githubusercontent.com/u/111692676?s=64&v=4',
-        login: 'd'
-    }],
+    organizations: [
+        {
+            avatar: 'https://avatars.githubusercontent.com/u/98403515?s=64&v=4',
+            login: 'a',
+        },
+        {
+            avatar: 'https://avatars.githubusercontent.com/u/98403600?s=64&v=4',
+            login: 'b',
+        },
+        {
+            avatar: 'https://avatars.githubusercontent.com/u/108737927?s=64&v=4',
+            login: 'c',
+        },
+        {
+            avatar: 'https://avatars.githubusercontent.com/u/111692676?s=64&v=4',
+            login: 'd',
+        },
+    ],
 };
 
 export default createBoard({
