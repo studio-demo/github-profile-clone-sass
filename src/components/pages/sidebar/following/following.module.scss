@@ -1,3 +1,5 @@
+@import '../../../../assets/index.scss';
+
 .root {
   display: flex;
   flex-direction: row;
@@ -9,9 +11,6 @@
 .root:hover {
   text-decoration: none;
 }
-
-// .root:not(:hover) {
-// }
 
 .number {
   color: var(--color-text-primary);

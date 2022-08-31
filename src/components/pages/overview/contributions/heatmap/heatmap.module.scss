@@ -1,3 +1,5 @@
+@import '../../../../../assets/index.scss';
+
 .root {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -5,8 +7,6 @@
   border-color: #d0d7de;
   border: 1px solid var(--color-border-muted);
 }
-
-@import '../../../../../assets/fonts.scss';
 
 .chart {
   display: flex;
