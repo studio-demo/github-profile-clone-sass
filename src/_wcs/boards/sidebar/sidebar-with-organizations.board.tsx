@@ -13,7 +13,7 @@ const JohnDoe: GitHubUser = {
     following: 0,
     twitter: '',
     url: '',
-    organization: '',
+    organization: 'Wix.com',
     organizations: [
         {
             avatar: 'https://avatars.githubusercontent.com/u/98403515?s=64&v=4',
@@ -38,7 +38,7 @@ export default createBoard({
     name: 'Sidebar - With Organizations',
     Board: () => <Sidebar user={JohnDoe} />,
     environmentProps: {
-        windowHeight: 1000,
+        windowHeight: 793,
         windowWidth: 500,
     },
 });
