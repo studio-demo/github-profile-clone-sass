@@ -55,7 +55,7 @@ export const parseUserResponse = (response: UserResponse): GitHubUser => {
 };
 
 export interface GitHubUser {
-    avatar: string;
+    avatar?: string;
     bio: string;
     username: string;
     name: string;

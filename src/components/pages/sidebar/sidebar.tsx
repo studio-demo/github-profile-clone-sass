@@ -1,6 +1,4 @@
 import classNames from 'classnames';
-import type React from 'react';
-import type { GitHubUser } from '../../../shared/model/github-user';
 import { Link } from '../../shared/link/link';
 import { Achievements } from './achievements/achievements';
 import { Avatar } from './avatar/avatar';
@@ -11,6 +9,8 @@ import { Organizations } from './organizations/organizations';
 import { SidebarBlock } from './sidebar-block/sidebar-block';
 import styles from './sidebar.module.scss';
 import { UserInfo } from './user-info/user-info';
+import type React from 'react';
+import type { GitHubUser } from '../../../shared/model/github-user';
 
 export interface SidebarProps {
     className?: string;
@@ -18,9 +18,10 @@ export interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ className, user }) => {
+    const avatar = user?.avatar || 'https://github.com/identicons/john-doe.png';
     return (
-        <aside className={classNames(styles.root, className)} style={{ gap: '16px' }}>
-            <Avatar url={user?.avatar} username={user?.username} name={user?.name} />
+        <aside className={classNames(styles.root, className)}>
+            <Avatar url={avatar} username={user?.username} name={user?.name} />
 
             <Follow />
 
