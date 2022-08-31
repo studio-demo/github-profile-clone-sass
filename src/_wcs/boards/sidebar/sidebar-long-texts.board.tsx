@@ -21,7 +21,7 @@ export default createBoard({
     name: 'Sidebar - Long Texts',
     Board: () => <Sidebar user={JohnDoe} />,
     environmentProps: {
-        windowHeight: 1060,
+        windowHeight: 1126,
         windowWidth: 798,
         canvasWidth: 302
     },

@@ -38,7 +38,7 @@ export default createBoard({
     name: 'Sidebar - With Organizations',
     Board: () => <Sidebar user={JohnDoe} />,
     environmentProps: {
-        windowHeight: 793,
+        windowHeight: 901,
         windowWidth: 500,
     },
 });
