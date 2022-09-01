@@ -1,6 +1,6 @@
 {
-  "name": "blank-scss",
-  "version": "0.1.0",
+  "name": "github-profile-clone-sass",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@octokit/graphql": "^5.0.0",
