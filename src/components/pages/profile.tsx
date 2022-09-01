@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { Sidebar } from './sidebar/sidebar';
 import { Overview } from './overview/overview';
 import type { GitHubUser } from '../../shared/model/github-user';
@@ -11,7 +10,7 @@ export interface ContentProps {
 
 export const Profile: React.FC<ContentProps> = ({ className, user }) => {
     return (
-        <div className={classNames(styles.root, className)}>
+        <div className={`${styles.root} ${className || ''}`}>
             <Sidebar user={user} />
 
             <main>

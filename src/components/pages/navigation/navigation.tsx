@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { memo, useContext } from 'react';
 import { AppContext } from '../../app.context';
 import { IMenuItem } from './menu/menu-item/menu-item';
@@ -39,7 +38,7 @@ export const Navigation = memo<NavigationProps>(function Navigation({ className 
         },
     ];
     return (
-        <nav className={classNames(styles.root, className)}>
+        <nav className={`${styles.root} ${className || ''}`}>
             <NavigationUserInfo className={styles.sidebar} />
 
             <NavigationTabs className={styles.content} menuItems={tabs} />

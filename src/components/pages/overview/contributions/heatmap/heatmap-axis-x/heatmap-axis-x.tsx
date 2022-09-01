@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import dateFormat from 'dateformat';
 import { memo } from 'react';
 import type { GitHubContributions } from '../../../../../../shared/model/github-contributions';
@@ -28,7 +27,7 @@ export const HeatmapAxisX = memo<HeatmapAxisXProps>(function HeatmapAxisX({ clas
     });
 
     return (
-        <div className={classNames(styles.root, className)}>
+        <div className={`${styles.root} ${className || ''}`}>
             {xTicks.map((tick, index) => (
                 <div className={styles.tick} key={index}>
                     {tick}

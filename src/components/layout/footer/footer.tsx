@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import classNames from 'classnames';
 import { GithubLogo } from '../../shared/github-logo/github-logo';
 import { Link } from '../../shared/link/link';
 import styles from './footer.module.scss';
@@ -10,7 +9,7 @@ export interface FooterProps {
 
 export const Footer = memo<FooterProps>(function Footer({ className }) {
     return (
-        <footer className={classNames(styles.root, className)}>
+        <footer className={`${styles.root} ${className || ''}}`}>
             <div className={styles.wrapper}>
                 <div className={styles.content}>
                     <GithubLogo className={styles.logo} />

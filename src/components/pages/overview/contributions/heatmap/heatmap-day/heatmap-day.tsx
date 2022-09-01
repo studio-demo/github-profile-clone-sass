@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { memo } from 'react';
 import styles from './heatmap-day.module.scss';
 
@@ -19,7 +18,7 @@ export const HeatmapDay = memo<HeatmapDayProps>(function HeatmapDay({ className,
         <div
             title={title}
             data-contribution-date={date}
-            className={classNames(styles.root, { [styles[levelClass]]: true }, className)}
+            className={`${styles.root} ${className || ''} ${styles[levelClass]}`}
         ></div>
     );
 });

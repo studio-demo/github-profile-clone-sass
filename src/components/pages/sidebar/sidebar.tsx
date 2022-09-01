@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { Link } from '../../shared/link/link';
 import { Avatar } from './avatar/avatar';
 import { Bio } from './bio/bio';
@@ -19,7 +18,7 @@ export interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ className, user }) => {
     const avatar = user?.avatar || 'https://github.com/identicons/john-doe.png';
     return (
-        <aside className={classNames(styles.root, className)}>
+        <aside className={`${styles.root} ${className || ''}`}>
             <Avatar url={avatar} username={user?.username} name={user?.name} />
 
             <Follow />

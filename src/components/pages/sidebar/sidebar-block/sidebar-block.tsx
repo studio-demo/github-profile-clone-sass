@@ -1,7 +1,6 @@
-import classNames from 'classnames';
+import styles from './sidebar-block.module.scss';
 import type React from 'react';
 import type { ReactNode } from 'react';
-import styles from './sidebar-block.module.scss';
 
 export interface SidebarBlockProps {
     className?: string;
@@ -11,7 +10,7 @@ export interface SidebarBlockProps {
 
 export const SidebarBlock: React.FC<SidebarBlockProps> = ({ className, children, label }) => {
     return (
-        <div className={classNames(styles.root, className)}>
+        <div className={`${styles.root} ${className || ''}`}>
             <p className={styles.title}>{label}</p>
             {children}
         </div>

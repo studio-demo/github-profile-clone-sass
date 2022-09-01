@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { memo } from 'react';
 import { Icon } from '../../../../shared/icon/icon';
 import type { Icons } from '../../../../shared/icon/icons';
@@ -29,7 +28,11 @@ export interface MenuItemProps {
 
 export const MenuItem = memo<MenuItemProps>(function NavigationTabs({ className, menuItem }) {
     return (
-        <li className={classNames(styles.root, { [styles.active]: menuItem.isActive }, styles.wrapper, className)}>
+        <li
+            className={`${styles.root} ${menuItem.isActive ? [styles.active] : ''} ${styles.wrapper} ${
+                className || ''
+            }`}
+        >
             <Icon className={styles.icon} name={menuItem.icon} />
             <span>{menuItem.name}</span>
             {(menuItem.counter ?? 0) > 0 && <span className={styles.badge}>{menuItem.counter}</span>}

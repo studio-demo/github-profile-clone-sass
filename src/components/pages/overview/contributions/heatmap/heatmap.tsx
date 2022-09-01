@@ -1,12 +1,11 @@
-import classNames from 'classnames';
 import { memo } from 'react';
-import type { GitHubContributions } from '../../../../../shared/model/github-contributions';
 import { Link } from '../../../../shared/link/link';
 import { HeatmapAxisX } from './heatmap-axis-x/heatmap-axis-x';
 import { HeatmapAxisY } from './heatmap-axis-y/heatmap-axis-y';
 import { HeatmapLegend } from './heatmap-legend/heatmap-legend';
 import { HeatmapWeek } from './heatmap-week/heatmap-week';
 import styles from './heatmap.module.scss';
+import type { GitHubContributions } from '../../../../../shared/model/github-contributions';
 
 export interface HeatmapProps {
     className?: string;
@@ -15,7 +14,7 @@ export interface HeatmapProps {
 
 export const Heatmap = memo<HeatmapProps>(function Heatmap({ className, weeks = [] }) {
     return (
-        <div className={classNames(styles.root, className)}>
+        <div className={`${styles.root} ${className || ''}`}>
             <HeatmapAxisX className={styles.axisX} weeks={weeks} />
 
             <div className={styles.chart}>
@@ -36,7 +35,7 @@ export const Heatmap = memo<HeatmapProps>(function Heatmap({ className, weeks = 
                 <HeatmapLegend />
             </div>
 
-            <div className={classNames(styles.promo, styles.footer)}>
+            <div className={`${styles.promo} ${styles.footer}`}>
                 NEW!
                 <Link url="https://skyline.github.com/">View your contribution in 3D, VR and IRL!</Link>
             </div>

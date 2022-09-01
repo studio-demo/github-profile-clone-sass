@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { memo, useMemo } from 'react';
 import type { GithubRepository } from '../../../../../shared/model/github-repository';
 import { Icon } from '../../../../shared/icon/icon';
@@ -40,7 +39,7 @@ export const Repository = memo<RepositoryProps>(function Repository({
             </div>
             <div className={styles.description}>{description}</div>
             <div className={styles.footer}>
-                {language && <div className={classNames(styles.language, languageState)}>{language}</div>}
+                {language && <div className={`${styles.language} ${languageState}`}>{language}</div>}
                 {stars > 0 && (
                     <div className={styles.stats}>
                         <Icon name="star" />

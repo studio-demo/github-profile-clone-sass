@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { memo } from 'react';
 import { Icon } from '../../../shared/icon/icon';
 import { Link } from '../../../shared/link/link';
@@ -22,7 +21,7 @@ export const UserInfo = memo<UserInfoProps>(function UserInfo({
     url,
 }) {
     return (
-        <ul className={classNames(styles.root, className)}>
+        <ul className={`${styles.root} ${className || ''}`}>
             {organization && (
                 <li className={styles.detail}>
                     <Icon className={styles.icon} name="organization" />

@@ -1,8 +1,7 @@
-import classNames from 'classnames';
-import type React from 'react';
-import type { GitHubUser } from '../../../../shared/model/github-user';
 import { Organization } from './organization/organization';
 import styles from './organizations.module.scss';
+import type React from 'react';
+import type { GitHubUser } from '../../../../shared/model/github-user';
 
 export interface OrganizationsProps {
     className?: string;
@@ -11,7 +10,7 @@ export interface OrganizationsProps {
 
 export const Organizations: React.FC<OrganizationsProps> = ({ className, organizations }) => {
     return (
-        <ul className={classNames(styles.root, className)}>
+        <ul className={`${styles.root} ${className || ''}`}>
             {organizations?.map((organization) => (
                 <Organization key={organization.login} organization={organization} />
             ))}

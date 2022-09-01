@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { memo } from 'react';
 import styles from './bio.module.scss';
 
@@ -8,5 +7,5 @@ export interface BioProps {
 }
 
 export const Bio = memo<BioProps>(function Bio({ className, bio }) {
-    return <div className={classNames(styles.root, className)}>{bio}</div>;
+    return <div className={`${styles.root} ${className || ''}`}>{bio}</div>;
 });

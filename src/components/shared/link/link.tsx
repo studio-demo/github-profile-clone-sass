@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React, { memo } from 'react';
 import styles from './link.module.scss';
 
@@ -13,7 +12,7 @@ export interface LinkProps {
 export const Link = memo<LinkProps>(function Link({ className, url, children, mute, bold }) {
     return (
         <a
-            className={classNames(styles.root, { [styles.muted]: mute }, { [styles.bolded]: bold }, className)}
+            className={`${styles.root} ${mute ? styles.muted : ''} ${bold ? styles.bolded : ''} ${className || ''}`}
             href={url}
         >
             {children}

@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { memo } from 'react';
 import styles from './avatar.module.scss';
 export interface AvatarProps {
@@ -10,7 +9,7 @@ export interface AvatarProps {
 
 export const Avatar = memo<AvatarProps>(function Avatar({ className, url, name, username }) {
     return (
-        <div className={classNames(styles.root, className)}>
+        <div className={`${styles.root} ${className || ''}`}>
             <img className={styles.image} src={url} alt={name ?? username} />
 
             <div className={styles.names}>
