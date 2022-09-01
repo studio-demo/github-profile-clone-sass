@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import styles from './popular-repositories.module.scss';
-import type { GithubRepository } from '../../../../shared/model/github-repository';
 import { Repository } from './repository/repository';
+import type { GithubRepository } from '../../../../shared/model/github-repository';
 
 export interface NavigationTabsProps {
     className?: string;
