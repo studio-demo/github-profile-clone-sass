@@ -7,9 +7,12 @@ import { Footer } from './layout/footer/footer';
 import { Header } from './layout/header/header';
 import { ProfilePage } from './pages/profile-page';
 import { Navigation } from './pages/navigation/navigation';
-import { GitHubUser } from '../shared/model/github-user';
-import { GithubRepository } from '../shared/model/github-repository';
-import { GitHubContributions } from '../shared/model/github-contributions';
+import { parseUserResponse } from '../shared/model/github-user';
+import { parseRepositoriesResponse } from '../shared/model/github-repository';
+import { parseContributionsResponse } from '../shared/model/github-contributions';
+import { response_user } from '../test-toolkit/mocks/github-user';
+import { response_repositories } from '../test-toolkit/mocks/github-repositories';
+import { response_contributions } from '../test-toolkit/mocks/github-contributions';
 
 export interface AppProps {
     /**
@@ -22,23 +25,14 @@ export interface AppProps {
      * Which profile you want to view.
      */
     username?: string;
-    userInfo?: GitHubUser;
-    userRepos?: GithubRepository[];
-    userContributions?: GitHubContributions;
-    navigationStats?: {
-        reposCount: number;
-        starsCount: number;
-    };
 }
 
-export const App: React.FC<AppProps> = ({
-    token,
-    username,
-    userInfo: defaultUserInfo,
-    userRepos: defaultUserRepos,
-    navigationStats: defaultNavigationStats,
-    userContributions: defaultUserContributions,
-}) => {
+const defaultUserInfo = parseUserResponse(response_user);
+const defaultUserRepos = parseRepositoriesResponse(response_repositories);
+const defaultNavigationStats = { reposCount: 35, starsCount: 14 };
+const defaultUserContributions = parseContributionsResponse(response_contributions);
+
+export const App: React.FC<AppProps> = ({ token, username }) => {
     const { githubService } = useContext(AppContext);
 
     if (token) {
