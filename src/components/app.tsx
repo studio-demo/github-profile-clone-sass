@@ -7,6 +7,9 @@ import { Footer } from './layout/footer/footer';
 import { Header } from './layout/header/header';
 import { ProfilePage } from './pages/profile-page';
 import { Navigation } from './pages/navigation/navigation';
+import { GitHubUser } from '../shared/model/github-user';
+import { GithubRepository } from '../shared/model/github-repository';
+import { GitHubContributions } from '../shared/model/github-contributions';
 
 export interface AppProps {
     /**
@@ -19,9 +22,23 @@ export interface AppProps {
      * Which profile you want to view.
      */
     username?: string;
+    userInfo?: GitHubUser;
+    userRepos?: GithubRepository[];
+    userContributions?: GitHubContributions;
+    navigationStats?: {
+        reposCount: number;
+        starsCount: number;
+    };
 }
 
-export const App: React.FC<AppProps> = ({ token, username }) => {
+export const App: React.FC<AppProps> = ({
+    token,
+    username,
+    userInfo: defaultUserInfo,
+    userRepos: defaultUserRepos,
+    navigationStats: defaultNavigationStats,
+    userContributions: defaultUserContributions,
+}) => {
     const { githubService } = useContext(AppContext);
 
     if (token) {
@@ -32,13 +49,25 @@ export const App: React.FC<AppProps> = ({ token, username }) => {
         githubService.setUsername(username);
     }
 
-    const userInfo = useFetcher(useMemo(() => githubService.getUserInfo(), [githubService]));
+    const userInfo = useFetcher(
+        useMemo(() => githubService.getUserInfo(), [githubService]),
+        defaultUserInfo
+    );
 
-    const userRepos = useFetcher(useMemo(() => githubService.getUserRepos(), [githubService]));
+    const userRepos = useFetcher(
+        useMemo(() => githubService.getUserRepos(), [githubService]),
+        defaultUserRepos
+    );
 
-    const navigationStats = useFetcher(useMemo(() => githubService.getUserStats(), [githubService]));
+    const navigationStats = useFetcher(
+        useMemo(() => githubService.getUserStats(), [githubService]),
+        defaultNavigationStats
+    );
 
-    const userContributions = useFetcher(useMemo(() => githubService.getContributions(), [githubService]));
+    const userContributions = useFetcher(
+        useMemo(() => githubService.getContributions(), [githubService]),
+        defaultUserContributions
+    );
 
     return (
         <AppContext.Provider

@@ -8,9 +8,9 @@ export interface Fetcher<T> {
     error: unknown | null;
 }
 
-export function useFetcher<T>(fetcher: DataFetcher<T>): Fetcher<T> {
+export function useFetcher<T>(fetcher: DataFetcher<T>, defaultValue?: T): Fetcher<T> {
     const [data, setData] = useState<T>();
-    const [isLoading, setLoading] = useState(true);
+    const [isLoading, setLoading] = useState(!defaultValue);
     const [hasError, setHasError] = useState(false);
     const [error, setError] = useState<unknown>(null);
 
@@ -31,5 +31,8 @@ export function useFetcher<T>(fetcher: DataFetcher<T>): Fetcher<T> {
         return () => fetcher.unsubscribe(onData);
     }, [fetcher]);
 
-    return useMemo(() => ({ data, isLoading, hasError, error }), [data, isLoading, hasError, error]);
+    return useMemo(
+        () => ({ data: data || defaultValue, isLoading, hasError, error }),
+        [data, defaultValue, isLoading, hasError, error]
+    );
 }
