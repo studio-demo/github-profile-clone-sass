@@ -5,6 +5,8 @@ export default createBoard({
     name: 'Follow',
     Board: () => <Follow />,
     environmentProps: {
-        canvasWidth: 300
+        canvasWidth: 240,
+        windowWidth: 300,
+        windowHeight: 300
     }
 });

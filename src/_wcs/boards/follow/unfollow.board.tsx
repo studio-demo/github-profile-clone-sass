@@ -5,6 +5,8 @@ export default createBoard({
     name: 'Unfollow',
     Board: () => <Follow defaultIsFollowing />,
     environmentProps: {
-        canvasWidth: 300
-    }
+        canvasWidth: 240,
+        windowWidth: 300,
+        windowHeight: 300,
+    },
 });
