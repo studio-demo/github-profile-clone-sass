@@ -1,0 +1,13 @@
+:root {
+  --dark-primary: #24292f;
+  --color-text-primary: var(--dark-primary);
+  --color-text-muted: #57606a;
+  --color-border-muted: #d0d7de;
+  --color-bg-primary: #ffffff;
+  --color-neutral-emphasis-plus: #6e7681;
+  --color-neutral-emphasis: #6e7681;
+  --color-neutral-muted: #afb8c133;
+
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+}

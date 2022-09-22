@@ -1,0 +1,34 @@
+@import '../../../../assets/index.scss';
+
+$spacing-between-columns: 16px;
+
+.root {
+}
+
+.title {
+  margin-bottom: 8px;
+  margin-top: 24px;
+
+  font-size: $large-font-size;
+  font-weight: 400;
+}
+
+.list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 0;
+}
+
+.item {
+  display: flex;
+  flex-basis: calc(50% - $spacing-between-columns / 2);
+}
+
+.item:nth-child(2n) {
+  margin-left: $spacing-between-columns;
+}

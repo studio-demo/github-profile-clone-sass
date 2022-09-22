@@ -1,0 +1,14 @@
+@import '../../../../../../assets/index.scss';
+
+.root {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  gap: 4px;
+}
+
+.tick {
+  font-size: $small-font-size;
+  line-height: 1;
+  width: var(--heatmap-day-size);
+}

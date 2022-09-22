@@ -1,0 +1,21 @@
+@import '../assets/index.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  width: 100%;
+  max-width: var(--max-page-width);
+
+  margin: 0 auto;
+  padding: 0 var(--page-padding);
+}

@@ -1,0 +1,287 @@
+[
+  {
+    "name": "Bootstrap",
+    "components": [
+      {
+        "filePath": "react-bootstrap/Alert",
+        "exportName": "default",
+        "name": "Alert"
+      },
+      {
+        "filePath": "react-bootstrap/Accordion",
+        "exportName": "default",
+        "name": "Accordion"
+      },
+      {
+        "filePath": "react-bootstrap/Badge",
+        "exportName": "default",
+        "name": "Badge"
+      },
+      {
+        "filePath": "react-bootstrap/Breadcrumb",
+        "exportName": "default",
+        "name": "Breadcrumb"
+      },
+      {
+        "filePath": "react-bootstrap/Button",
+        "exportName": "default",
+        "name": "Button"
+      },
+      {
+        "filePath": "react-bootstrap/ButtonGroup",
+        "exportName": "default",
+        "name": "ButtonGroup"
+      },
+      {
+        "filePath": "react-bootstrap/Card",
+        "exportName": "default",
+        "name": "Card"
+      },
+      {
+        "filePath": "react-bootstrap/Carousel",
+        "exportName": "default",
+        "name": "Carousel"
+      },
+      {
+        "filePath": "react-bootstrap/CloseButton",
+        "exportName": "default",
+        "name": "CloseButton"
+      },
+      {
+        "filePath": "react-bootstrap/Col",
+        "exportName": "default",
+        "name": "Col"
+      },
+      {
+        "filePath": "react-bootstrap/Container",
+        "exportName": "default",
+        "name": "Container"
+      },
+      {
+        "filePath": "react-bootstrap/Dropdown",
+        "exportName": "default",
+        "name": "Dropdown"
+      },
+      {
+        "filePath": "react-bootstrap/DropdownButton",
+        "exportName": "default",
+        "name": "DropdownButton"
+      },
+      {
+        "filePath": "react-bootstrap/Figure",
+        "exportName": "default",
+        "name": "Figure"
+      },
+      {
+        "filePath": "react-bootstrap/FigureCaption",
+        "exportName": "default",
+        "name": "FigureCaption"
+      },
+      {
+        "filePath": "react-bootstrap/FigureImage",
+        "exportName": "default",
+        "name": "FigureImage"
+      },
+      {
+        "filePath": "react-bootstrap/Form",
+        "exportName": "default",
+        "name": "Form"
+      },
+      {
+        "filePath": "react-bootstrap/Image",
+        "exportName": "default",
+        "name": "Image"
+      },
+      {
+        "filePath": "react-bootstrap/InputGroup",
+        "exportName": "default",
+        "name": "InputGroup"
+      },
+      {
+        "filePath": "react-bootstrap/ListGroup",
+        "exportName": "default",
+        "name": "ListGroup"
+      },
+      {
+        "filePath": "react-bootstrap/Modal",
+        "exportName": "default",
+        "name": "Modal"
+      },
+      {
+        "filePath": "react-bootstrap/ModalBody",
+        "exportName": "default",
+        "name": "ModalBody"
+      },
+      {
+        "filePath": "react-bootstrap/ModalDialog",
+        "exportName": "default",
+        "name": "ModalDialog"
+      },
+      {
+        "filePath": "react-bootstrap/ModalFooter",
+        "exportName": "default",
+        "name": "ModalFooter"
+      },
+      {
+        "filePath": "react-bootstrap/ModalHeader",
+        "exportName": "default",
+        "name": "ModalHeader"
+      },
+      {
+        "filePath": "react-bootstrap/ModalTitle",
+        "exportName": "default",
+        "name": "ModalTitle"
+      },
+      {
+        "filePath": "react-bootstrap/Nav",
+        "exportName": "default",
+        "name": "Nav"
+      },
+      {
+        "filePath": "react-bootstrap/Navbar",
+        "exportName": "default",
+        "name": "Navbar"
+      },
+      {
+        "filePath": "react-bootstrap/NavDropdown",
+        "exportName": "default",
+        "name": "NavDropdown"
+      },
+      {
+        "filePath": "react-bootstrap/Offcanvas",
+        "exportName": "default",
+        "name": "Offcanvas"
+      },
+      {
+        "filePath": "react-bootstrap/OffcanvasBody",
+        "exportName": "default",
+        "name": "OffcanvasBody"
+      },
+      {
+        "filePath": "react-bootstrap/OffcanvasHeader",
+        "exportName": "default",
+        "name": "OffcanvasHeader"
+      },
+      {
+        "filePath": "react-bootstrap/OffcanvasTitle",
+        "exportName": "default",
+        "name": "OffcanvasTitle"
+      },
+      {
+        "filePath": "react-bootstrap/Overlay",
+        "exportName": "default",
+        "name": "Overlay"
+      },
+      {
+        "filePath": "react-bootstrap/OverlayTrigger",
+        "exportName": "default",
+        "name": "OverlayTrigger"
+      },
+      {
+        "filePath": "react-bootstrap/Pagination",
+        "exportName": "default",
+        "name": "Pagination"
+      },
+      {
+        "filePath": "react-bootstrap/PageItem",
+        "exportName": "default",
+        "name": "PageItem"
+      },
+      {
+        "filePath": "react-bootstrap/Placeholder",
+        "exportName": "default",
+        "name": "Placeholder"
+      },
+      {
+        "filePath": "react-bootstrap/Popover",
+        "exportName": "default",
+        "name": "Popover"
+      },
+      {
+        "filePath": "react-bootstrap/PopoverBody",
+        "exportName": "default",
+        "name": "PopoverBody"
+      },
+      {
+        "filePath": "react-bootstrap/PopoverHeader",
+        "exportName": "default",
+        "name": "PopoverHeader"
+      },
+      {
+        "filePath": "react-bootstrap/ProgressBar",
+        "exportName": "default",
+        "name": "ProgressBar"
+      },
+      {
+        "filePath": "react-bootstrap/Row",
+        "exportName": "default",
+        "name": "Row"
+      },
+      {
+        "filePath": "react-bootstrap/Spinner",
+        "exportName": "default",
+        "name": "Spinner"
+      },
+      {
+        "filePath": "react-bootstrap/SplitButton",
+        "exportName": "default",
+        "name": "SplitButton"
+      },
+      {
+        "filePath": "react-bootstrap/Tab",
+        "exportName": "default",
+        "name": "Tab"
+      },
+      {
+        "filePath": "react-bootstrap/Tabs",
+        "exportName": "default",
+        "name": "Tabs"
+      },
+      {
+        "filePath": "react-bootstrap/TabContainer",
+        "exportName": "default",
+        "name": "TabContainer"
+      },
+      {
+        "filePath": "react-bootstrap/TabContent",
+        "exportName": "default",
+        "name": "TabContent"
+      },
+      {
+        "filePath": "react-bootstrap/Table",
+        "exportName": "default",
+        "name": "Table"
+      },
+      {
+        "filePath": "react-bootstrap/TabPane",
+        "exportName": "default",
+        "name": "TabPane"
+      },
+      {
+        "filePath": "react-bootstrap/Toast",
+        "exportName": "default",
+        "name": "Toast"
+      },
+      {
+        "filePath": "react-bootstrap/ToastHeader",
+        "exportName": "default",
+        "name": "ToastHeader"
+      },
+      {
+        "filePath": "react-bootstrap/ToastBody",
+        "exportName": "default",
+        "name": "ToastBody"
+      },
+      {
+        "filePath": "react-bootstrap/ToastContainer",
+        "exportName": "default",
+        "name": "ToastContainer"
+      },
+      {
+        "filePath": "react-bootstrap/Tooltip",
+        "exportName": "default",
+        "name": "Tooltip"
+      }
+    ]
+  }
+]

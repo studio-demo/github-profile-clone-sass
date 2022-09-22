@@ -1,0 +1,14 @@
+@import '../../../assets/index.scss';
+
+.root {
+  height: 62px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 16px var(--page-padding);
+  margin-bottom: 24px;
+  background-color: var(--dark-primary);
+}
+
+.logo {
+  margin-right: 16px;
+  color: var(--color-bg-primary);
+}
