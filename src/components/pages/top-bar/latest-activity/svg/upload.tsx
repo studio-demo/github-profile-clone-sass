@@ -1,6 +1,6 @@
 export const uploadIcon = (
     <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="38" height="38" rx="4" fill="#4E69F5" fill-opacity="0.3" />
+        <rect width="38" height="38" rx="4" fill="#4E69F5" fillOpacity="0.3" />
         <path
             d="M18.0006 12.914L18.0006 22.992H19.0006L19.0006 12.914L22.0356 15.949L22.7426 15.242L18.5006 11L14.2576 15.242L14.9646 15.949L18.0006 12.914Z"
             fill="black"
