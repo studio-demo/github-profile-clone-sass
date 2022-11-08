@@ -1,9 +1,9 @@
 import type { Fetcher } from '../../shared/hooks/use-fetcher';
-import type { GitHubUser } from '../../shared/model/github-user';
+import type { ApiUser } from 'src/shared/model/api-user';
 
 import { Profile } from './profile';
 
-export const ProfilePage: React.FC<{ userInfo: Fetcher<GitHubUser | null> }> = ({ userInfo }) => {
+export const ProfilePage: React.FC<{ userInfo: Fetcher<ApiUser | null> }> = ({ userInfo }) => {
     if (userInfo.isLoading) {
         document.title = 'Loading...';
 

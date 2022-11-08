@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import type { GitHubUser } from '../../shared/model/github-user';
+import type { ApiUser } from '../../shared/model/api-user';
 import { Driver } from '../../test-toolkit/driver';
 import { testRenderer } from '../../test-toolkit/test-render';
 import { Profile } from './profile';
@@ -10,7 +10,7 @@ describe(`Profile page component:`, () => {
 
     const JohnDoe = {
         name: 'John Doe',
-    } as GitHubUser;
+    } as ApiUser;
 
     afterEach(async () => {
         await renderer.dispose();

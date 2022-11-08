@@ -22,7 +22,7 @@ export interface GitHubContributionsPerDay {
 
 export type GitHubContributionsWeek = GitHubContributionsPerDay[];
 
-export interface GitHubContributions {
+export interface ApiContributions {
     total: number;
     max: number;
     weeks: GitHubContributionsWeek[];
@@ -55,7 +55,7 @@ const getMaxContribution = (gitHubWeeks: GithubWeek[]) =>
             .flat()
     );
 
-export const parseContributionsResponse = (response: ContributionResponse): GitHubContributions => {
+export const parseContributionsResponse = (response: ContributionResponse): ApiContributions => {
     const {
         user: {
             contributionsCollection: {

@@ -1,10 +1,10 @@
 import { memo } from 'react';
 import { HeatmapDay } from '../heatmap-day/heatmap-day';
-import type { GitHubContributions } from '../../../../../../shared/model/github-contributions';
+import type { ApiContributions } from 'src/shared/model/api-contributions';
 
 export interface HeatmapWeekProps {
     className?: string;
-    week: GitHubContributions['weeks'][0];
+    week: ApiContributions['weeks'][0];
 }
 
 export const HeatmapWeek = memo<HeatmapWeekProps>(function HeatmapWeek({ className, week }) {

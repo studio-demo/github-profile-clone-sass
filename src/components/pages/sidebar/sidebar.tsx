@@ -8,11 +8,11 @@ import { SidebarBlock } from './sidebar-block/sidebar-block';
 import styles from './sidebar.module.scss';
 import { UserInfo } from './user-info/user-info';
 import type React from 'react';
-import type { GitHubUser } from '../../../shared/model/github-user';
+import type { ApiUser } from 'src/shared/model/api-user';
 
 export interface SidebarProps {
     className?: string;
-    user?: GitHubUser;
+    user?: ApiUser;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ className, user }) => {

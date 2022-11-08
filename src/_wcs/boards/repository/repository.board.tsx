@@ -1,10 +1,10 @@
 import { createBoard } from '@wixc3/react-board';
-import { Repository } from '../../../components/pages/overview/popular-repositories/repository/repository';
+import { Project } from 'src/components/pages/overview/popular-repositories/repository/project';
 
 export default createBoard({
     name: 'Repository',
     Board: () => (
-        <Repository
+        <Project
             description="mocked repo"
             forks={13}
             language="javascript"

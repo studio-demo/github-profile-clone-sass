@@ -1,8 +1,8 @@
 import { createBoard } from '@wixc3/react-board';
 import { Sidebar } from '../../../components/pages/sidebar/sidebar';
-import type { GitHubUser } from '../../../shared/model/github-user';
+import type { ApiUser } from 'src/shared/model/api-user';
 
-const JohnDoe: GitHubUser = {
+const JohnDoe: ApiUser = {
     bio: '',
     username: 'john-doe',
     location: 'USA',

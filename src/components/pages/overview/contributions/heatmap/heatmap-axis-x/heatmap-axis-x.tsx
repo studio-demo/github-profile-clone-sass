@@ -1,11 +1,11 @@
 import dateFormat from 'dateformat';
 import { memo } from 'react';
-import type { GitHubContributions } from '../../../../../../shared/model/github-contributions';
+import type { ApiContributions } from 'src/shared/model/api-contributions';
 import styles from './heatmap-axis-x.module.scss';
 
 export interface HeatmapAxisXProps {
     className?: string;
-    weeks: GitHubContributions['weeks'];
+    weeks: ApiContributions['weeks'];
 }
 
 export const HeatmapAxisX = memo<HeatmapAxisXProps>(function HeatmapAxisX({ className, weeks }) {

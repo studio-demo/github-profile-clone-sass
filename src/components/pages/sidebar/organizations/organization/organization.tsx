@@ -1,11 +1,11 @@
 import { memo } from 'react';
 import { Link } from '../../../../shared/link/link';
 import styles from './organization.module.scss';
-import type { GitHubOrganization } from '../../../../../shared/model/github-organization';
+import type { ApiOrganization } from 'src/shared/model/api-organization';
 
 export interface OrganizationProps {
     className?: string;
-    organization: GitHubOrganization;
+    organization: ApiOrganization;
 }
 
 export const Organization = memo<OrganizationProps>(function Organization({ className, organization }) {

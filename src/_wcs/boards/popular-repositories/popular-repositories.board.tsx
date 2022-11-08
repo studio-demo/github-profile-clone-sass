@@ -1,10 +1,10 @@
 import { createBoard } from '@wixc3/react-board';
-import { PopularRepositories } from '../../../components/pages/overview/popular-repositories/popular-repositories';
+import { Repositories } from 'src/components/pages/overview/popular-repositories/repositories';
 
 export default createBoard({
     name: 'PopularRepositories',
     Board: () => (
-        <PopularRepositories
+        <Repositories
             repositories={[
                 {
                     description: 'some repo',

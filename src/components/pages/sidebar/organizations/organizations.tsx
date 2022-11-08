@@ -1,11 +1,11 @@
 import { Organization } from './organization/organization';
 import styles from './organizations.module.scss';
 import type React from 'react';
-import type { GitHubUser } from '../../../../shared/model/github-user';
+import type { ApiUser } from 'src/shared/model/api-user';
 
 export interface OrganizationsProps {
     className?: string;
-    organizations?: GitHubUser['organizations'];
+    organizations?: ApiUser['organizations'];
 }
 
 export const Organizations: React.FC<OrganizationsProps> = ({ className, organizations }) => {

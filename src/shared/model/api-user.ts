@@ -1,4 +1,4 @@
-import type { GitHubOrganization } from './github-organization';
+import type { ApiOrganization } from './api-organization';
 
 export type UserResponse = {
     user: {
@@ -32,7 +32,7 @@ export type UserResponse = {
     };
 };
 
-export const parseUserResponse = (response: UserResponse): GitHubUser => {
+export const parseUserResponse = (response: UserResponse): ApiUser => {
     return {
         avatar: response.user.avatarUrl,
         bio: response.user.bio ?? '',
@@ -54,7 +54,7 @@ export const parseUserResponse = (response: UserResponse): GitHubUser => {
     };
 };
 
-export interface GitHubUser {
+export interface ApiUser {
     avatar?: string;
     bio: string;
     username: string;
@@ -66,5 +66,5 @@ export interface GitHubUser {
     email: string;
     twitter: string | null;
     url: string;
-    organizations: GitHubOrganization[];
+    organizations: ApiOrganization[];
 }

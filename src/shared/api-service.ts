@@ -4,12 +4,12 @@ import { response_contributions } from '../test-toolkit/mocks/github-contributio
 import { response_repositories } from '../test-toolkit/mocks/github-repositories';
 import { response_user } from '../test-toolkit/mocks/github-user';
 import { DataFetcher } from './data-fetcher';
-import { ContributionResponse, parseContributionsResponse } from './model/github-contributions';
-import type { RepositoryResponse } from './model/github-repository';
-import { parseRepositoriesResponse } from './model/github-repository';
-import { parseUserResponse, UserResponse } from './model/github-user';
+import { ContributionResponse, parseContributionsResponse } from './model/api-contributions';
+import type { RepositoryResponse } from './model/api-project';
+import { parseAPIProjectsResponse } from './model/api-project';
+import { parseUserResponse, UserResponse } from './model/api-user';
 
-export class GithubService {
+export class APIService {
     token = '';
     username = '';
 
@@ -188,11 +188,11 @@ export class GithubService {
                     }
                 );
 
-                return parseRepositoriesResponse(response);
+                return parseAPIProjectsResponse(response);
             } else {
                 await sleep(100);
 
-                return parseRepositoriesResponse(response_repositories);
+                return parseAPIProjectsResponse(response_repositories);
             }
         });
     }

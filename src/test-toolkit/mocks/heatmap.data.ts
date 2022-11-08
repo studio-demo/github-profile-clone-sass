@@ -1,6 +1,6 @@
-import type { GitHubContributions } from '../../shared/model/github-contributions';
+import type { ApiContributions } from 'src/shared/model/api-contributions';
 
-export const data: GitHubContributions['weeks'] = [
+export const data: ApiContributions['weeks'] = [
     [
         {
             contributionCount: 0,

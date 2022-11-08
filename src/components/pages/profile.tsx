@@ -1,11 +1,11 @@
 import { Sidebar } from './sidebar/sidebar';
 import { Overview } from './overview/overview';
-import type { GitHubUser } from '../../shared/model/github-user';
+import type { ApiUser } from 'src/shared/model/api-user';
 import styles from './profile.module.scss';
 
 export interface ContentProps {
     className?: string;
-    user: GitHubUser;
+    user: ApiUser;
 }
 
 export const Profile: React.FC<ContentProps> = ({ className, user }) => {

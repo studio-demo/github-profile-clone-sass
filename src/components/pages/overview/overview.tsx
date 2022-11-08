@@ -2,14 +2,14 @@ import type React from 'react';
 import { useContext, useMemo } from 'react';
 import { AppContext } from '../../app.context';
 import { Contributions } from './contributions/contributions';
-import { PopularRepositories } from './popular-repositories/popular-repositories';
+import { Projects } from './projects/projects';
 export interface OverviewProps {
     className?: string;
 }
 
 export const Overview: React.FC<OverviewProps> = ({ className }) => {
     const { userRepos } = useContext(AppContext);
-    const popularRepos = useMemo(() => userRepos?.data?.slice(0, 6) ?? [], [userRepos]);
+    const projects = useMemo(() => userRepos?.data?.slice(0, 6) ?? [], [userRepos]);
 
     if (userRepos?.isLoading) {
         return <div>Loading...</div>;
@@ -27,7 +27,7 @@ export const Overview: React.FC<OverviewProps> = ({ className }) => {
 
     return (
         <div className={className}>
-            {popularRepos.length > 0 && <PopularRepositories repositories={popularRepos} />}
+            {projects.length > 0 && <Projects repositories={projects} />}
 
             <Contributions />
         </div>

@@ -16,7 +16,7 @@ export type RepositoryResponse = {
         };
     };
 };
-export interface GithubRepository {
+export interface APIProject {
     /** Name of the repository */
     name: string;
     /** URL of the repository */
@@ -31,7 +31,7 @@ export interface GithubRepository {
     language: string;
 }
 
-export const parseRepositoriesResponse = (response: RepositoryResponse): GithubRepository[] => {
+export const parseAPIProjectsResponse = (response: RepositoryResponse): APIProject[] => {
     return response.user.repositories.edges
         .map(({ node }) => node)
         .map((repo) => ({
