@@ -40,6 +40,7 @@ export const TopBar: React.FC<TopBarProps> = ({ className, user }) => {
                     twitter={user?.twitter}
                     url={user?.url}
                 />
+
                 <Techs technologies={[htmlIcon, pythonIcon, cSharpIcon, reactIcon, nodeIcon, jsIcon]} />
             </div>
         </aside>

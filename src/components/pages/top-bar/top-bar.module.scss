@@ -9,7 +9,15 @@
 .userinfo {
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.userinfo > *:not(:first-child) {
+  margin-left: 32px;
+  border-left: 1px solid rgba(211, 211, 211, 1);
+  padding-left: 56px;
 }
 
 .names {
@@ -21,7 +29,7 @@
 .name {
   font-weight: 600;
   font-size: 24px;
-  line-height: 1.25;
+  line-height: 1.6;
 }
 
 .username {

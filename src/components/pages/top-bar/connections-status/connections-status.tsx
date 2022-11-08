@@ -10,7 +10,7 @@ export interface ConnectionsStatusProps {
 export const ConnectionsStatus = memo<ConnectionsStatusProps>(function Following({ className, connections, year }) {
     return (
         <div className={`${styles.root} ${className || ''}`}>
-            {connections} connections · Member since {year}
+            <span className={styles.number}>{connections}</span> connections · Member since {year}
         </div>
     );
 });
