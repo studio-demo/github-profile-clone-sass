@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Project } from './project/project';
-import type { APIProject } from 'src/shared/model/a-p-i-project';
+import type { APIProject } from '../../../../shared/model/api-project';
 import styles from './projects.module.scss';
 
 export interface NavigationTabsProps {

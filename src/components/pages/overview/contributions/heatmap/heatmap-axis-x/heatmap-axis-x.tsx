@@ -1,6 +1,6 @@
 import dateFormat from 'dateformat';
 import { memo } from 'react';
-import type { ApiContributions } from 'src/shared/model/api-contributions';
+import type { ApiContributions } from '../../../../../../shared/model/api-contributions';
 import styles from './heatmap-axis-x.module.scss';
 
 export interface HeatmapAxisXProps {

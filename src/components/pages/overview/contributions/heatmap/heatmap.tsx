@@ -3,7 +3,7 @@ import { HeatmapAxisX } from './heatmap-axis-x/heatmap-axis-x';
 import { HeatmapAxisY } from './heatmap-axis-y/heatmap-axis-y';
 import { HeatmapWeek } from './heatmap-week/heatmap-week';
 import styles from './heatmap.module.scss';
-import type { ApiContributions } from 'src/shared/model/api-contributions';
+import type { ApiContributions } from '../../../../../shared/model/api-contributions';
 
 export interface HeatmapProps {
     className?: string;

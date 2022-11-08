@@ -1,9 +1,9 @@
 import { createBoard } from '@wixc3/react-board';
 import { Sidebar } from '../../../components/pages/sidebar/sidebar';
-import type { ApiUser } from 'src/shared/model/api-user';
+import type { ApiUser } from '../../../shared/model/api-user';
 
 const JohnDoe: ApiUser = {
-    avatar: 'https://avatars.githubusercontent.com/u/1254848?u=dd9acf92f36f11079f53a3e15ff8c3421cc10f97&v=4',
+    avatar: 'https://i.pravatar.cc/64?u=john-doe',
     bio: 'Some bio information',
     username: 'john-doe',
     location: 'USA',

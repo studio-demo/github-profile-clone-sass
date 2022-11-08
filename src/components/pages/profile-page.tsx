@@ -1,5 +1,5 @@
 import type { Fetcher } from '../../shared/hooks/use-fetcher';
-import type { ApiUser } from 'src/shared/model/api-user';
+import type { ApiUser } from '../../shared/model/api-user';
 
 import { Profile } from './profile';
 

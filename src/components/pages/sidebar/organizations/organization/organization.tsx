@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { Link } from '../../../../shared/link/link';
 import styles from './organization.module.scss';
-import type { ApiOrganization } from 'src/shared/model/api-organization';
+import type { ApiOrganization } from '../../../../../shared/model/api-organization';
 
 export interface OrganizationProps {
     className?: string;

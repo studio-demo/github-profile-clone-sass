@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { DriverHeatmap } from '../../../../../test-toolkit/driver-heatmap';
-import { data } from '../../../../../test-toolkit/mocks/heatmap.data';
+import { data } from '../../../../../test-toolkit/mocks/mock-heatmap.data';
 import { testRenderer } from '../../../../../test-toolkit/test-render';
 import { Heatmap } from './heatmap';
 

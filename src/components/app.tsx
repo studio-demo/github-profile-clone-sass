@@ -9,9 +9,9 @@ import { Navigation } from './pages/navigation/navigation';
 import { parseUserResponse } from '../shared/model/api-user';
 import { parseAPIProjectsResponse } from '../shared/model/api-project';
 import { parseContributionsResponse } from '../shared/model/api-contributions';
-import { response_user } from '../test-toolkit/mocks/github-user';
-import { response_repositories } from '../test-toolkit/mocks/github-repositories';
-import { response_contributions } from '../test-toolkit/mocks/github-contributions';
+import { response_user } from '../test-toolkit/mocks/mock-user';
+import { response_repositories } from '../test-toolkit/mocks/mock-repositories';
+import { response_contributions } from '../test-toolkit/mocks/mock-contributions';
 
 export interface AppProps {
     /**

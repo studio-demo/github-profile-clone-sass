@@ -1,6 +1,6 @@
 import { createBoard } from '@wixc3/react-board';
 import { Sidebar } from '../../../components/pages/sidebar/sidebar';
-import type { ApiUser } from 'src/shared/model/api-user';
+import type { ApiUser } from '../../../shared/model/api-user';
 
 const JohnDoe: ApiUser = {
     bio: '',

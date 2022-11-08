@@ -1,4 +1,4 @@
-import type { ApiContributions } from 'src/shared/model/api-contributions';
+import type { ApiContributions } from '../../shared/model/api-contributions';
 
 export const data: ApiContributions['weeks'] = [
     [

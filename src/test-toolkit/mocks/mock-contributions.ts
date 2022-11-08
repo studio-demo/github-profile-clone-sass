@@ -1,4 +1,4 @@
-import type { ContributionResponse } from 'src/shared/model/api-contributions';
+import type { ContributionResponse } from '../../shared/model/api-contributions';
 
 export const response_contributions: ContributionResponse = {
     user: {

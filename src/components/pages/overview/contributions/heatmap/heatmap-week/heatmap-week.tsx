@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { HeatmapDay } from '../heatmap-day/heatmap-day';
-import type { ApiContributions } from 'src/shared/model/api-contributions';
+import type { ApiContributions } from '../../../../../../shared/model/api-contributions';
 
 export interface HeatmapWeekProps {
     className?: string;

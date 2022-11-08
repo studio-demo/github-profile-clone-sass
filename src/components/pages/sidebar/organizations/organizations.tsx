@@ -1,7 +1,7 @@
 import { Organization } from './organization/organization';
 import styles from './organizations.module.scss';
 import type React from 'react';
-import type { ApiUser } from 'src/shared/model/api-user';
+import type { ApiUser } from '../../../../shared/model/api-user';
 
 export interface OrganizationsProps {
     className?: string;

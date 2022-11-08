@@ -1,6 +1,6 @@
 import { Sidebar } from './sidebar/sidebar';
 import { Overview } from './overview/overview';
-import type { ApiUser } from 'src/shared/model/api-user';
+import type { ApiUser } from '../../shared/model/api-user';
 import styles from './profile.module.scss';
 
 export interface ContentProps {

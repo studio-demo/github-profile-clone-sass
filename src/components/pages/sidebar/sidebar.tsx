@@ -8,7 +8,7 @@ import { SidebarBlock } from './sidebar-block/sidebar-block';
 import styles from './sidebar.module.scss';
 import { UserInfo } from './user-info/user-info';
 import type React from 'react';
-import type { ApiUser } from 'src/shared/model/api-user';
+import type { ApiUser } from '../../../shared/model/api-user';
 
 export interface SidebarProps {
     className?: string;
