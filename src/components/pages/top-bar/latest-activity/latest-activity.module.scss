@@ -1,5 +1,5 @@
 .container {
-  width: 400px;
+  width: var(--page-column-width);
   flex-shrink: 0;
   padding: 0;
 }

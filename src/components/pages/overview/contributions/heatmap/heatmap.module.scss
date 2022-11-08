@@ -3,7 +3,7 @@
 .root {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    padding: 12px 8px 8px 0px;
+    padding: 12px 8px 8px 0;
 }
 
 .chart {
@@ -16,27 +16,6 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: var(--color-text-muted);
-    padding: 0 15px 0 30px;
-    font-size: $small-font-size;
-}
-
-.promo {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 4px;
-    margin-top: 12px;
-}
-
-.link {
-    margin-top: 12px;
 }
 
 .axisX {
