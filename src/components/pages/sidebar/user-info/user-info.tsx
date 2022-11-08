@@ -25,13 +25,7 @@ export const UserInfo = memo<UserInfoProps>(function UserInfo({
             {organization && (
                 <li className={styles.detail}>
                     <Icon className={styles.icon} name="organization" />
-                    {organization.startsWith('@') ? (
-                        <Link url={`https://github.com/${organization.substring(1)}`} mute bold>
-                            {organization}
-                        </Link>
-                    ) : (
-                        <>{organization}</>
-                    )}
+                    <span>{organization}</span>
                 </li>
             )}
             {location && (

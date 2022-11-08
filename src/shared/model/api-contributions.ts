@@ -1,31 +1,31 @@
 import type { ContributionLevel } from '../../components/pages/overview/contributions/heatmap/heatmap-day/heatmap-day';
 
-type GithubDay = { contributionCount: number; date: string };
-type GithubWeek = { contributionDays: GithubDay[] };
+type DayData = { contributionCount: number; date: string };
+type WeekData = { contributionDays: DayData[] };
 
 export type ContributionResponse = {
     user: {
         contributionsCollection: {
             contributionCalendar: {
                 totalContributions: number;
-                weeks: GithubWeek[];
+                weeks: WeekData[];
             };
         };
     };
 };
 
-export interface GitHubContributionsPerDay {
+export interface DayContributions {
     contributionCount: number;
     date: string;
     contributionLevel: ContributionLevel;
 }
 
-export type GitHubContributionsWeek = GitHubContributionsPerDay[];
+export type Week = DayContributions[];
 
 export interface ApiContributions {
     total: number;
     max: number;
-    weeks: GitHubContributionsWeek[];
+    weeks: Week[];
 }
 
 const deriveContributionLevel = (count: number, max: number): ContributionLevel => {
@@ -46,9 +46,9 @@ const deriveContributionLevel = (count: number, max: number): ContributionLevel 
  *
  * @returns max contribution per day in given period, always >= 0
  */
-const getMaxContribution = (gitHubWeeks: GithubWeek[]) =>
+const getMaxContribution = (weeksData: WeekData[]) =>
     Math.max(
-        ...gitHubWeeks
+        ...weeksData
             .map(({ contributionDays: week }) =>
                 week.filter((day) => day.contributionCount > 0).map(({ contributionCount }) => contributionCount)
             )
@@ -59,14 +59,14 @@ export const parseContributionsResponse = (response: ContributionResponse): ApiC
     const {
         user: {
             contributionsCollection: {
-                contributionCalendar: { totalContributions: total, weeks: gitHubWeeks },
+                contributionCalendar: { totalContributions: total, weeks: weeksData },
             },
         },
     } = response;
 
-    const max = getMaxContribution(gitHubWeeks);
+    const max = getMaxContribution(weeksData);
 
-    const weeks = gitHubWeeks.map(({ contributionDays: week }) =>
+    const weeks = weeksData.map(({ contributionDays: week }) =>
         week.map((day) => ({
             ...day,
             contributionLevel: deriveContributionLevel(day.contributionCount, max),

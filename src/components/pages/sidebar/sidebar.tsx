@@ -1,10 +1,7 @@
-import { Link } from '../../shared/link/link';
 import { Avatar } from './avatar/avatar';
 import { Bio } from './bio/bio';
 import { Follow } from './follow/follow';
 import { Following } from './following/following';
-import { Organizations } from './organizations/organizations';
-import { SidebarBlock } from './sidebar-block/sidebar-block';
 import styles from './sidebar.module.scss';
 import { UserInfo } from './user-info/user-info';
 import type React from 'react';
@@ -16,7 +13,8 @@ export interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ className, user }) => {
-    const avatar = user?.avatar || 'https://github.com/identicons/john-doe.png';
+    const avatar =
+        user?.avatar || 'https://t4.ftcdn.net/jpg/03/32/59/65/240_F_332596535_lAdLhf6KzbW6PWXBWeIFTovTii1drkbT.jpg';
     return (
         <aside className={`${styles.root} ${className || ''}`}>
             <Avatar url={avatar} username={user?.username} name={user?.name} />
@@ -34,16 +32,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, user }) => {
                 twitter={user?.twitter}
                 url={user?.url}
             />
-
-            {user?.organizations?.length ? (
-                <SidebarBlock label="Organizations">
-                    <Organizations organizations={user?.organizations} />
-                </SidebarBlock>
-            ) : null}
-
-            <Link url="#" mute>
-                Block or Report
-            </Link>
         </aside>
     );
 };

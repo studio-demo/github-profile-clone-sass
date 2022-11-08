@@ -8,11 +8,7 @@ import type { ApiUser } from '../shared/model/api-user';
 export interface IAppContext {
     apiService: APIService;
     userInfo?: Fetcher<ApiUser | null>;
-    userRepos?: Fetcher<APIProject[]>;
-    navigationStats?: Fetcher<{
-        reposCount: number;
-        starsCount: number;
-    }>;
+    userProjects?: Fetcher<APIProject[]>;
     userContributions?: Fetcher<ApiContributions>;
 }
 

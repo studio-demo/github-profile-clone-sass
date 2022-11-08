@@ -8,18 +8,18 @@ export interface OverviewProps {
 }
 
 export const Overview: React.FC<OverviewProps> = ({ className }) => {
-    const { userRepos } = useContext(AppContext);
-    const projects = useMemo(() => userRepos?.data?.slice(0, 6) ?? [], [userRepos]);
+    const { userProjects } = useContext(AppContext);
+    const projects = useMemo(() => userProjects?.data?.slice(0, 6) ?? [], [userProjects]);
 
-    if (userRepos?.isLoading) {
+    if (userProjects?.isLoading) {
         return <div>Loading...</div>;
     }
 
-    if (userRepos?.hasError) {
+    if (userProjects?.hasError) {
         document.title = 'Error';
         const errorMessage =
-            typeof userRepos?.error === 'object' && userRepos?.error !== null && 'toString' in userRepos.error
-                ? userRepos?.error?.toString()
+            typeof userProjects?.error === 'object' && userProjects?.error !== null && 'toString' in userProjects.error
+                ? userProjects?.error?.toString()
                 : 'Unknown error';
 
         return <div>{errorMessage}</div>;
@@ -27,7 +27,7 @@ export const Overview: React.FC<OverviewProps> = ({ className }) => {
 
     return (
         <div className={className}>
-            {projects.length > 0 && <Projects repositories={projects} />}
+            {projects.length > 0 && <Projects projects={projects} />}
 
             <Contributions />
         </div>

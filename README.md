@@ -1,1 +1,1 @@
-# GitHub Profile Page Clone: Sass
+# 2Ducks Profile Page

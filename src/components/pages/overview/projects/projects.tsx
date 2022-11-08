@@ -5,20 +5,20 @@ import styles from './projects.module.scss';
 
 export interface NavigationTabsProps {
     className?: string;
-    repositories?: APIProject[];
+    projects?: APIProject[];
 }
 
-export const Projects = memo<NavigationTabsProps>(function Projects({ className, repositories = [] }) {
+export const Projects = memo<NavigationTabsProps>(function Projects({ className, projects = [] }) {
     return (
         <div className={`${styles.root} ${className || ''}`}>
             <p className={styles.title}>Projects</p>
             <ul className={styles.list}>
-                {repositories.map((repository) => (
+                {projects.map((project) => (
                     <Project
                         className={styles.item}
-                        key={repository.name}
-                        name={repository.name}
-                        description={repository.description}
+                        key={project.name}
+                        name={project.name}
+                        description={project.description}
                     />
                 ))}
             </ul>
