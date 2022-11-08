@@ -1,9 +1,9 @@
 import { createBoard } from '@wixc3/react-board';
-import { Follow } from '../../../components/pages/sidebar/follow/follow';
+import { ConnectButton } from '../../../components/pages/top-bar/connect-button/connect-button';
 
 export default createBoard({
     name: 'Unfollow',
-    Board: () => <Follow defaultIsFollowing />,
+    Board: () => <ConnectButton defaultIsConnected />,
     environmentProps: {
         canvasWidth: 240,
         windowWidth: 300,

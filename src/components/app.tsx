@@ -56,9 +56,8 @@ export const App: React.FC<AppProps> = ({ username }) => {
         >
             <div className={styles.root}>
                 <Header />
-                <div className={styles.page}>
-                    <ProfilePage userInfo={userInfo} />
-                </div>
+
+                <ProfilePage className={styles.page} userInfo={userInfo} />
             </div>
         </AppContext.Provider>
     );

@@ -1,15 +1,16 @@
 import { createBoard } from '@wixc3/react-board';
-import { Sidebar } from '../../../components/pages/sidebar/sidebar';
+import { TopBar } from '../../../components/pages/top-bar/top-bar';
 import type { ApiUser } from '../../../shared/model/api-user';
 
 const JohnDoe: ApiUser = {
-    bio: '',
+    avatar: 'https://i.pravatar.cc/64?u=john-doe',
+    bio: 'Some bio information',
     username: 'john-doe',
     location: 'USA',
     name: 'John Doe',
     email: 'john@doe.com',
     followers: 19,
-    following: 0,
+    following: 20,
     twitter: '',
     url: '',
     organization: '',
@@ -17,10 +18,10 @@ const JohnDoe: ApiUser = {
 };
 
 export default createBoard({
-    name: 'Sidebar - Missing Image',
-    Board: () => <Sidebar user={JohnDoe} />,
+    name: 'Top Bar',
+    Board: () => <TopBar user={JohnDoe} />,
     environmentProps: {
-        windowHeight: 793,
-        windowWidth: 500,
+        windowHeight: 452,
+        windowWidth: 1352,
     },
 });

@@ -1,7 +1,7 @@
 import { createBoard } from '@wixc3/react-board';
-import { Following } from '../../../components/pages/sidebar/following/following';
+import { ConnectionsStatus } from '../../../components/pages/top-bar/connections-status/connections-status';
 
 export default createBoard({
-    name: 'Following',
-    Board: () => <Following followers={42} following={13} />,
+    name: 'ConnectionsStatus',
+    Board: () => <ConnectionsStatus connections={'8k'} year={1984} />,
 });

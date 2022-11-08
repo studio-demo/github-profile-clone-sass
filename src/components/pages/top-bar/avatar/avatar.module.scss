@@ -1,0 +1,19 @@
+@import '../../../../assets/index.scss';
+
+.root {
+    display: flex;
+    width: 400px;
+    flex-shrink: 0;
+}
+
+.image {
+    position: relative;
+    z-index: 1;
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    background: var(--color-bg-primary);
+    border: 1px solid #3B8CD2;
+    border-radius: 23px;
+    box-shadow: 0 0 0 1px rgba(27, 31, 36, 0.15);
+}
