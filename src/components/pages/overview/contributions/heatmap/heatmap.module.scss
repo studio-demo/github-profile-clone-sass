@@ -1,50 +1,47 @@
 @import '../../../../../assets/index.scss';
 
 .root {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  padding: 12px 8px 8px 34px;
-  border-color: #d0d7de;
-  border: 1px solid var(--color-border-muted);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 12px 8px 8px 0px;
 }
 
 .chart {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
 }
 
 .week {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: var(--color-text-muted);
-  padding: 0 15px 0 30px;
-  font-size: $small-font-size;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--color-text-muted);
+    padding: 0 15px 0 30px;
+    font-size: $small-font-size;
 }
 
 .promo {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  gap: 4px;
-  margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 12px;
 }
 
 .link {
-  margin-top: 12px;
+    margin-top: 12px;
 }
 
 .axisX {
-  padding-left: 30px;
-  margin-bottom: 8px;
+    padding-left: 30px;
+    margin-bottom: 8px;
 }
 
-.axisY {
-}
+.axisY {}

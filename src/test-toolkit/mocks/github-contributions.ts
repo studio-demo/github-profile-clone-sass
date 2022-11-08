@@ -10,38 +10,6 @@ export const response_contributions: ContributionResponse = {
                         contributionDays: [
                             {
                                 contributionCount: 0,
-                                date: '2021-07-25',
-                            },
-                            {
-                                contributionCount: 0,
-                                date: '2021-07-26',
-                            },
-                            {
-                                contributionCount: 1,
-                                date: '2021-07-27',
-                            },
-                            {
-                                contributionCount: 0,
-                                date: '2021-07-28',
-                            },
-                            {
-                                contributionCount: 0,
-                                date: '2021-07-29',
-                            },
-                            {
-                                contributionCount: 0,
-                                date: '2021-07-30',
-                            },
-                            {
-                                contributionCount: 0,
-                                date: '2021-07-31',
-                            },
-                        ],
-                    },
-                    {
-                        contributionDays: [
-                            {
-                                contributionCount: 0,
                                 date: '2021-08-01',
                             },
                             {
