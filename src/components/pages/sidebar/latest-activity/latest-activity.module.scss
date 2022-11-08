@@ -1,0 +1,34 @@
+
+
+.container{
+    width: 90%;
+}
+
+.title{
+    font-size: 18px;
+}
+
+.activity{
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 29px;
+    align-items: center;
+}
+
+.info{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    line-height: 0px;
+    margin-left: 10px;
+    position: relative;
+    top: 7px;
+}
+.action{
+    font-weight: 200;
+}
+
+.date{
+    font-size: 11px;
+}
+
