@@ -10,8 +10,8 @@ export interface ProjectProps {
 export const Project = memo<ProjectProps>(function Project({ className, name, description }) {
     return (
         <li className={`${styles.root} ${className}`}>
-            <div className={styles.header}>{name}</div>
             <div className={styles.description}>{description}</div>
+            <div className={styles.header}>{name}</div>
         </li>
     );
 });

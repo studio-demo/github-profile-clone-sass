@@ -1,7 +1,13 @@
 @import '../../assets/index.scss';
 
 .root {
-  display: flex;
-  flex-direction: row;
-  gap: var(--page-gap);
+    display: flex;
+    flex-direction: column;
+    gap: var(--page-gap);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
 }
