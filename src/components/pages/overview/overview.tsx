@@ -3,13 +3,6 @@ import { useContext, useMemo } from 'react';
 import { AppContext } from '../../app.context';
 import { Contributions } from './contributions/contributions';
 import { Projects } from './projects/projects';
-import { Techs } from './techs/techs';
-import { htmlIcon } from './techs/icons/html';
-import { pythonIcon } from './techs/icons/python';
-import { cSharpIcon } from './techs/icons/CSharp';
-import { reactIcon } from './techs/icons/react';
-import { nodeIcon } from './techs/icons/node';
-import { jsIcon } from './techs/icons/js';
 export interface OverviewProps {
     className?: string;
 }
@@ -34,7 +27,6 @@ export const Overview: React.FC<OverviewProps> = ({ className }) => {
 
     return (
         <div className={className}>
-            <Techs technologies={[pythonIcon, cSharpIcon, htmlIcon, reactIcon, nodeIcon, jsIcon]} />
             {projects.length > 0 && <Projects projects={projects} />}
 
             <Contributions />
