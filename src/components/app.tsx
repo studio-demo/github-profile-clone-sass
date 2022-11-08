@@ -5,7 +5,6 @@ import { AppContext } from './app.context';
 import styles from './app.module.scss';
 import { Header } from './layout/header/header';
 import { ProfilePage } from './pages/profile-page';
-import { Navigation } from './pages/navigation/navigation';
 import { parseUserResponse } from '../shared/model/api-user';
 import { parseAPIProjectsResponse } from '../shared/model/api-project';
 import { parseContributionsResponse } from '../shared/model/api-contributions';
@@ -75,7 +74,6 @@ export const App: React.FC<AppProps> = ({ token, username }) => {
             <div className={styles.root}>
                 <Header />
                 <div className={styles.page}>
-                    <Navigation />
                     <ProfilePage userInfo={userInfo} />
                 </div>
             </div>
