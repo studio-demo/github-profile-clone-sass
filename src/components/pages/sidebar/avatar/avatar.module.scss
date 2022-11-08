@@ -8,11 +8,12 @@
 .image {
   position: relative;
   z-index: 1;
-  width: 100%;
-  border-radius: 50%;
+  width: 175px;
+  height: 175px;
   object-fit: cover;
-  border: 1px solid var(--color-border-muted);
   background: var(--color-bg-primary);
+  border: 1px solid #3B8CD2;
+  border-radius: 23px;
   box-shadow: 0 0 0 1px rgba(27, 31, 36, 0.15);
 }
 

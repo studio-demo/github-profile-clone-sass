@@ -1,10 +1,10 @@
 @import '../../../assets/index.scss';
 
 .root {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: var(--page-sidebar-width);
-  flex-shrink: 0;
-  margin-top: -32px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: var(--page-sidebar-width);
+    flex-shrink: 0;
+    margin-top: -32px;
 }

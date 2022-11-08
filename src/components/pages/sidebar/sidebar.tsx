@@ -2,11 +2,10 @@ import { Avatar } from './avatar/avatar';
 import styles from './sidebar.module.scss';
 import type React from 'react';
 import type { ApiUser } from '../../../shared/model/api-user';
-import { LatestActivity } from './latest-activity/latest-activity';
-import { folderIcon } from './latest-activity/svg/folder';
-import { milestoneIcon } from './latest-activity/svg/milestone';
-import { uploadIcon } from './latest-activity/svg/upload';
-import { documentIcon } from './latest-activity/svg/document';
+import { UserInfo } from './user-info/user-info';
+import { Follow } from './follow/follow';
+import { Bio } from './bio/bio';
+import { Following } from './following/following';
 
 export interface SidebarProps {
     className?: string;
@@ -20,18 +19,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, user }) => {
         <aside className={`${styles.root} ${className || ''}`}>
             <Avatar url={avatar} username={user?.username} name={user?.name} />
 
-            <LatestActivity
-                children={[
-                    { icon: folderIcon, action: 'Added new  project', commit: 'Goldar/Sybo-Room', date: 'Dec 29' },
-                    { icon: folderIcon, action: 'Added new  project', commit: 'Goldar/Sybo-Room', date: 'Dec 27' },
-                    { icon: milestoneIcon, action: 'Badge', commit: 'Goldar/Sybo-Room', date: 'Dec 25' },
-                    { icon: uploadIcon, action: 'Upload something', commit: 'Goldar/Sybo-Room', date: 'Dec 18' },
-                    { icon: documentIcon, action: 'Updated documentation', commit: 'Goldar/Sybo-Room', date: 'Dec 12' },
-                    { icon: folderIcon, action: 'Added new  project', commit: 'Goldar/Sybo-Room', date: 'Nov 30' },
-                ]}
-            />
-
-            {/* <Follow />
+            <Follow />
 
             <Bio bio={user?.bio} />
 
@@ -43,7 +31,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, user }) => {
                 email={user?.email}
                 twitter={user?.twitter}
                 url={user?.url}
-            />*/}
+            />
         </aside>
     );
 };
