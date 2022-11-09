@@ -10,6 +10,7 @@ export type UserResponse = {
         email: string;
         twitterUsername: string | null;
         websiteUrl: string;
+        techs: JSX.Element[];
         company: string;
         following: {
             totalCount: number;
@@ -45,6 +46,7 @@ export const parseUserResponse = (response: UserResponse): ApiUser => {
         email: response.user.email,
         twitter: response.user.twitterUsername,
         url: response.user.websiteUrl,
+        techs: response.user.techs,
         organizations: response.user.organizations.edges
             .map(({ node }) => node)
             .map((organization) => ({
@@ -65,6 +67,7 @@ export interface ApiUser {
     location: string;
     email: string;
     twitter: string | null;
+    techs?: JSX.Element[];
     url: string;
     organizations: ApiOrganization[];
 }

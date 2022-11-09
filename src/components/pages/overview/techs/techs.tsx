@@ -4,7 +4,7 @@ interface TechsProps {
     technologies: JSX.Element[];
 }
 
-export const Techs: React.FC<TechsProps> = ({ technologies }) => {
+export const Techs = ({ technologies }: TechsProps) => {
     return (
         <div>
             <p className={styles.title}>Tech Stack</p>

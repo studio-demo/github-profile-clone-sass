@@ -6,12 +6,6 @@ import { UserInfo } from './user-info/user-info';
 import { ConnectButton } from './connect-button/connect-button';
 import { ConnectionsStatus } from './connections-status/connections-status';
 import { Techs } from '../overview/techs/techs';
-import { pythonIcon } from '../overview/techs/icons/python';
-import { cSharpIcon } from '../overview/techs/icons/CSharp';
-import { htmlIcon } from '../overview/techs/icons/html';
-import { reactIcon } from '../overview/techs/icons/react';
-import { nodeIcon } from '../overview/techs/icons/node';
-import { jsIcon } from '../overview/techs/icons/js';
 
 export interface TopBarProps {
     className?: string;
@@ -41,7 +35,7 @@ export const TopBar: React.FC<TopBarProps> = ({ className, user }) => {
                     url={user?.url}
                 />
 
-                <Techs technologies={[htmlIcon, pythonIcon, cSharpIcon, reactIcon, nodeIcon, jsIcon]} />
+                <Techs technologies={user?.techs ?? []} />
             </div>
         </aside>
     );

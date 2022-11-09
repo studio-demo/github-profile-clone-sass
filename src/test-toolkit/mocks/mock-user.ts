@@ -1,4 +1,10 @@
 import { UserResponse } from '../../shared/model/api-user';
+import { pythonIcon } from '../../components/pages/overview/techs/icons/python';
+import { cSharpIcon } from '../../components/pages/overview/techs/icons/CSharp';
+import { htmlIcon } from '../../components/pages/overview/techs/icons/html';
+import { reactIcon } from '../../components/pages/overview/techs/icons/react';
+import { nodeIcon } from '../../components/pages/overview/techs/icons/node';
+import { jsIcon } from '../../components/pages/overview/techs/icons/js';
 
 export const response_user: UserResponse = {
     user: {
@@ -10,6 +16,7 @@ export const response_user: UserResponse = {
         email: 'pavlol@wix.com',
         twitterUsername: null,
         websiteUrl: 'http://wix.com',
+        techs: [htmlIcon, pythonIcon, cSharpIcon, reactIcon, nodeIcon, jsIcon],
         company: 'Wix',
         following: {
             totalCount: 68,
