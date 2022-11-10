@@ -35,7 +35,7 @@ export const TopBar: React.FC<TopBarProps> = ({ className, user }) => {
                     url={user?.url}
                 />
 
-                <Techs technologies={user?.techs ?? []} />
+                <Techs technologies={user?.techs?.technologies} />
             </div>
         </aside>
     );

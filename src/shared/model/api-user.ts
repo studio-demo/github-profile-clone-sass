@@ -1,4 +1,5 @@
 import type { ApiOrganization } from './api-organization';
+import type { TechsProps } from '../../components/pages/overview/techs/techs';
 
 export type UserResponse = {
     user: {
@@ -10,7 +11,7 @@ export type UserResponse = {
         email: string;
         twitterUsername: string | null;
         websiteUrl: string;
-        techs: JSX.Element[];
+        techs: TechsProps;
         company: string;
         following: {
             totalCount: number;
@@ -67,7 +68,7 @@ export interface ApiUser {
     location: string;
     email: string;
     twitter: string | null;
-    techs?: JSX.Element[];
+    techs?: TechsProps;
     url: string;
     organizations: ApiOrganization[];
 }

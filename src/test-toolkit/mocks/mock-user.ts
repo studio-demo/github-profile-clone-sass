@@ -16,7 +16,7 @@ export const response_user: UserResponse = {
         email: 'pavlol@wix.com',
         twitterUsername: null,
         websiteUrl: 'http://wix.com',
-        techs: [htmlIcon, pythonIcon, cSharpIcon, reactIcon, nodeIcon, jsIcon],
+        techs: {technologies: ['react' , 'html' , 'node' , 'python' , 'js' , 'csharp']},
         company: 'Wix',
         following: {
             totalCount: 68,
