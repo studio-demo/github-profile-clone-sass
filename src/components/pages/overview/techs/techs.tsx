@@ -30,16 +30,24 @@ const convertTechToIcon = (tech: string): JSX.Element | undefined => {
     }
 };
 
-export const Techs = ({ technologies }: TechsProps) => {
+const TechStacks = ({ technologies }: TechsProps): JSX.Element => {
     return (
-        <div>
-            <p className={styles.title}>Tech Stack</p>
+        <>
             <div className={styles.techs}>
                 {technologies!.slice(0, technologies!.length / 2).map((tech) => convertTechToIcon(tech))}
             </div>
             <div className={styles.techs}>
                 {technologies!.slice(technologies!.length / 2).map((tech) => convertTechToIcon(tech))}
             </div>
+        </>
+    );
+};
+
+export const Techs = ({ technologies }: TechsProps) => {
+    return (
+        <div>
+            <p className={styles.title}>Tech Stack</p>
+            {technologies ? <TechStacks technologies={technologies} /> : null}
         </div>
     );
 };
