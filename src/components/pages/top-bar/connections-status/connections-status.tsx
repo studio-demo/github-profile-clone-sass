@@ -3,7 +3,7 @@ import styles from './following.module.scss';
 
 export interface ConnectionsStatusProps {
     className?: string;
-    connections?: string;
+    connections?: number;
     year?: number;
 }
 

@@ -8,15 +8,14 @@ const JohnDoe: ApiUser = {
     location: 'USA',
     name: 'John Doe',
     email: 'john@doe.com',
-    followers: 19,
-    following: 0,
+    followers: 19, 
     twitter: '',
     url: '',
     organization: '',
     organizations: [],
     techs: {
         technologies: ['react', 'js']
-    }
+    },
 };
 
 export default createBoard({

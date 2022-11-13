@@ -62,8 +62,8 @@ export interface ApiUser {
     bio: string;
     username: string;
     name: string;
-    followers: number;
-    following: number;
+    followers?: number;
+    following?: number;
     organization: string;
     location: string;
     email: string;

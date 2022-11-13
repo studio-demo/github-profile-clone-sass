@@ -24,7 +24,7 @@ export const TopBar: React.FC<TopBarProps> = ({ className, user }) => {
                     <span className={styles.name}>{user?.name}</span>
                     <span className={styles.username}>{user?.username}</span>
                     <ConnectButton />
-                    <ConnectionsStatus connections={'8k'} year={1984} />
+                    <ConnectionsStatus connections={user?.followers} year={1984} />
                 </div>
 
                 <UserInfo
