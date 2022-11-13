@@ -29,13 +29,13 @@
 }
 
 .button:hover {
-  background-color: #f3f4f6;
+  background: #f3f4f6;
   border-color: rgba(27, 31, 36, 0.15);
   transition-duration: 0.1s;
 }
 
 .button:active {
-  background-color: hsla(220, 14%, 93%, 1);
+  background: hsla(220, 14%, 93%, 1);
   border-color: rgba(27, 31, 36, 0.15);
   transition-duration: 0.1s;
 }
