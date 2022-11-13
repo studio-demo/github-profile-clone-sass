@@ -4,7 +4,6 @@ import type React from 'react';
 import type { ApiUser } from '../../../shared/model/api-user';
 import { UserInfo } from './user-info/user-info';
 import { ConnectButton } from './connect-button/connect-button';
-import { ConnectionsStatus } from './connections-status/connections-status';
 import { Techs } from '../overview/techs/techs';
 
 export interface TopBarProps {
@@ -24,8 +23,7 @@ export const TopBar: React.FC<TopBarProps> = ({ className, user }) => {
                     <span className={styles.name}>{user?.name}</span>
                     <span className={styles.username}>{user?.username}</span>
                     <ConnectButton />
-                    <ConnectionsStatus connections={user?.followers} year={1984} />
-                </div>
+                    <span className={styles.members}>Member since 1984</span></div>
 
                 <UserInfo
                     organization={user?.organization}

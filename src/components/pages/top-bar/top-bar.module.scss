@@ -1,41 +1,45 @@
 @import '../../../assets/index.scss';
 
 .root {
-  display: flex;
-  flex-direction: row;
-  padding: 56px 0;
+    display: flex;
+    flex-direction: row;
+    padding: 56px 0;
 }
 
 .userinfo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
 }
 
-.userinfo > *:not(:first-child) {
-  margin-left: 32px;
-  border-left: 1px solid rgba(211, 211, 211, 1);
-  padding-left: 56px;
+.userinfo>*:not(:first-child) {
+    margin-left: 32px;
+    border-left: 1px solid rgba(211, 211, 211, 1);
+    padding-left: 56px;
 }
 
 .names {
-  display: flex;
-  flex-direction: column;
-  margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
 }
 
 .name {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.6;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.6;
 }
 
 .username {
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-  color: var(--color-text-muted);
-  line-height: 24px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    line-height: 24px;
+}
+
+.members {
+    color: var(--color-text-muted);
 }
