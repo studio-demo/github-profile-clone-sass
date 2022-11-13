@@ -8,7 +8,7 @@ import { jsIcon } from '../../components/pages/overview/techs/icons/js';
 
 export const response_user: UserResponse = {
     user: {
-        avatarUrl: 'https://i.pravatar.cc/150?img=pavlo',
+        avatarUrl: 'https://ichef.bbci.co.uk/news/976/cpsprodpb/7727/production/_103330503_musk3.jpg',
         bio: null,
         login: 'plisovyi',
         name: 'Pavlo',
