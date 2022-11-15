@@ -29,18 +29,18 @@ export const response_projects: ProjectsResponse = {
                             'Program for reading and writing linked data in various formats.  Short for "RDF Babel".',
                     },
                 },
-                {
-                    node: {
-                        name: 'pad',
-                        description: 'A SoLiD app for shared collaborate editing of a text document',
-                    },
-                },
-                {
-                    node: {
-                        name: 'standard',
-                        description: 'JavaScript Standard Style — One Style to Rule Them All',
-                    },
-                },
+                // {
+                //     node: {
+                //         name: 'pad',
+                //         description: 'A SoLiD app for shared collaborate editing of a text document',
+                //     },
+                // },
+                // {
+                //     node: {
+                //         name: 'standard',
+                //         description: 'JavaScript Standard Style — One Style to Rule Them All',
+                //     },
+                // },
             ],
         },
     },
