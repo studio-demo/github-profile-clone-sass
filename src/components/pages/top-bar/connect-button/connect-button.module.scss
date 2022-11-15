@@ -1,41 +1,41 @@
 @import '../../../../assets/index.scss';
 
 .root {
-  width: 100%;
+    width: 100%;
 }
 
 .button {
-  display: block;
-  width: 100%;
-  padding: 8px 80px;
-  margin: 16px 0;
-  color: rgba(32, 69, 94, 1);
+    display: block;
+    width: 100%;
+    padding: 8px 80px;
+    margin: 16px 0;
+    color: var(--color-bg-primary);
 
-  background: rgba(78, 183, 245, 0.1);
-  border: 1px solid rgba(78, 183, 245, 0.2);
-  border-radius: 30px;
+    background: var(--dark-primary);
+    border: 1px solid rgba(78, 183, 245, 0.2);
+    border-radius: 30px;
 
-  box-shadow: rgba(27, 31, 36, 0.04) 0 1px 0 0;
+    box-shadow: rgba(27, 31, 36, 0.04) 0 1px 0 0;
 
 
-  text-align: center;
-  font-size: $medium-font-size;
+    text-align: center;
+    font-size: $medium-font-size;
 
-  font-weight: 500;
-  line-height: 20px;
+    font-weight: 500;
+    line-height: 20px;
 
-  cursor: pointer;
-  user-select: none;
+    cursor: pointer;
+    user-select: none;
 }
 
 .button:hover {
-  background: #f3f4f6;
-  border-color: rgba(27, 31, 36, 0.15);
-  transition-duration: 0.1s;
+    background: var(--color-text-muted);
+    border-color: rgba(27, 31, 36, 0.15);
+    transition-duration: 0.1s;
 }
 
 .button:active {
-  background: hsla(220, 14%, 93%, 1);
-  border-color: rgba(27, 31, 36, 0.15);
-  transition-duration: 0.1s;
+    background: hsla(220, 14%, 93%, 1);
+    border-color: rgba(27, 31, 36, 0.15);
+    transition-duration: 0.1s;
 }
