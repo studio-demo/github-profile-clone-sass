@@ -8,7 +8,7 @@ import { jsIcon } from '../../components/pages/overview/techs/icons/js';
 
 export const response_user: UserResponse = {
     user: {
-        avatarUrl: 'https://freesvg.org/img/myAvatar.png',
+        avatarUrl: 'https://static.wixstatic.com/media/68d3a9_a9372f08e00c4a44ab575bbdd42a51ee~mv2.png',
         bio: null,
         login: 'AnnieW',
         name: 'Annie Williams',
